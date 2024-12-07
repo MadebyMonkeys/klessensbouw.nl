@@ -15,15 +15,15 @@ h1, h2, h3 {
     color: var(--neutral-950);
 }
 
-h1 {
+h1, .h1 {
     --heading-font-size: var(--fs-800);
 }
 
-h2 {
+h2, .h2 {
     --heading-font-size: var(--fs-700);
 }
 
-h3 {
+h3, .h3 {
     --heading-font-size: var(--fs-600);
 }
 
