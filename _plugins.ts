@@ -7,7 +7,6 @@ import sass from "lume/plugins/sass.ts";
 import slugify_urls from "lume/plugins/slugify_urls.ts";
 import svgo from "lume/plugins/svgo.ts";
 import transform_images from "lume/plugins/transform_images.ts";
-import googleFonts from "lume/plugins/google_fonts.ts";
 
 const site = lume({ src: "_src" });
 
@@ -50,11 +49,6 @@ export default function () {
       .use(slugify_urls())
       .use(svgo())
       .use(transform_images())
-      .use(googleFonts({
-        cssFile: "css/styles.scss",
-        fonts:
-          "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap",
-      }))
       .copy("js")
       .copy("static", ".");
   };
