@@ -1,0 +1,27 @@
+---
+layout: layouts/base.vto
+---
+<section class="[ service ] [ full-width ] [ region bgcolor-neutral-50 ]">
+    <div class="grid-auto-fit ai-center">
+        <div class="content">
+            {{- content -}}
+        </div>
+        <div class="image">
+            <img class="image--rounded" src="{{ image }}" alt="{{ title }}">
+        </div>
+    </div>
+</section>
+<section class="[ services ] [] [ region ]">
+    <div class="grid-auto-fit" data-cols="three">
+        {{ set services = search.pages("type=service", "order=desc") }}
+        {{ for service of services }}
+            <div class="card service shadow flow">
+                <img class="icon" src="{{ service.icon }}" inline >
+                <h3>{{ service.title }}</h3>
+                <p>{{ service.description }}</p>
+                <a class="button" href="{{ service.url }}">Lees verder</a>
+            </div>
+        {{ /for }}
+    </div>
+</section>
+{{ include "partials/sections/cta.vto" }}

@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+
+// -----------------------------------------------------------------------------
+// Site Header
+// -----------------------------------------------------------------------------
+
+.site-header {
+    position: relative;
+    padding: #{$site-header-padding};
+    z-index: 999;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

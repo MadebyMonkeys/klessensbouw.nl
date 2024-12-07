@@ -1,0 +1,41 @@
+---
+layout: layouts/base.vto
+---
+
+<section class="[ contact ] [ ] [ region ]">
+    <div class="grid-auto-fit" data-cols="two">
+        <div class="content flow">
+            {{ content }}
+
+            <ul class="company-info-list" role="list">
+                <li><ion-icon name="pin"></ion-icon> {{ site.address.street }} <br> {{ site.address.zipcode }} {{ site.address.city }}</li>
+                <li><ion-icon name="call"></ion-icon> <a href="{{ site.phone }}">{{ site.phone }}</a></li>
+                <li><ion-icon name="mail"></ion-icon> {{ site.email }}</li>
+            </ul>
+        </div>
+
+        <form action="https://formsubmit.co/kleske@live.nl" method="POST" name="contact" class="[ flow ]">
+            <div class="">
+                <label for="naam">Naam</label>
+                <input type="text" id="naam" name="naam" />
+            </div>
+            
+            <div class="">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" />
+            </div>
+        
+            <div class="">
+                <label for="onderwerp">Onderwerp</label>
+                <input type="text" id="onderwerp" name="onderwerp" />
+            </div>
+        
+            <div class="">
+                <label for="bericht">Uw bericht</label>
+                <textarea id="bericht" name="bericht" rows="10" class=""></textarea>
+            </div>
+            
+            <button class="button" type="submit">Verzend</button>
+        </form>
+    </div>
+</section>

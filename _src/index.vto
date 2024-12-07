@@ -1,0 +1,94 @@
+---
+layout: layouts/base.vto
+
+menu:
+  visible: true
+  title: Home
+  url: "/"
+  order: 1
+
+title: "Homepage"
+description: Some cool description
+
+hero_section:
+  title: "Helder van offerte tot oplevering"
+  bgImage: "/img/kbt-personeel.webp"
+  buttonOne:
+    title: "bekijk ons werk"
+    url: "#work"
+  buttonTwo:
+    title: "vraag een offerte aan"
+    url: "/offerte"
+
+showcase_section:
+  title: "Kleine selectie van ons werk"
+
+cta_section:
+  title: Werk met ons om uw idee tot een werkelijkeheid te maken!
+  button:
+    title: vraag offerte aan
+    url: "/offerte"
+
+about_section:
+  title: "Over KBT"
+  description: "KBT is in 2007 ontstaan uit het (handmatig) verlijmen van kalkzandsteen elementen in de ruwbouw. Inmiddels verzorgt KBT graag uw klus of opdracht voor bedrijf en particulier."
+  image: "/img/kbt-busje.webp"
+
+testimonial_section:
+  title: "Deze mensen gingen uw voor"
+  body: "Een kleine selectie van wat andere zeggen over KBT"
+
+---
+
+<section class="[ hero ] [ full-width ] [ region flow ]">
+    <div class="hero__image full">
+        <img class="" src="{{ hero_section.bgImage }}" />
+    </div>
+    <div class="hero__content flow">
+        <h1 class="block__title">{{ hero_section.title }}</h1>
+        <div class="controls">
+            <a class="button" href="{{ hero_section.buttonOne.url }}">{{ hero_section.buttonOne.title }}</a>
+            <a class="button" data-ghost-button href="{{ hero_section.buttonTwo.url }}">{{ hero_section.buttonTwo.title }}</a>
+        </div>
+    </div>
+</section>
+<section class="[ services services--homepage ] [ full-width ] [ region ]">
+    <div class="grid-auto-fit">
+        {{ set services = search.pages("type=service", "order=desc") }}
+        {{ for service of services }}
+            <div class="card service shadow flow">
+                <img class="icon" src="{{ service.icon }}" inline >
+                <h3>{{ service.title }}</h3>
+                <p>{{ service.description }}</p>
+                <a class="button" href="{{ service.url }}">Lees verder</a>
+            </div>
+        {{ /for }}
+    </div>
+</section>
+<section id="work" class="[ projects ] [ full-width ] [ region ]">
+    <h2 class="mt-0 color-neutral-50">{{ showcase_section.title }}</h2>
+    <div class="grid-auto-fit" data-cols="two">
+      {{ set projects = search.pages("type=project", "order=desc") }}
+      {{ for project of projects }}
+        <div class="card flow">
+          <h3 class="mt-0">{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <a href="{{ project.url }}" class="button">Bekijk project</a>
+        </div>
+      {{ /for }}
+    </div>
+</section>
+<section class="[ about ] [ full-width ] [ region ]">
+    <div class="grid-auto-fit ai-center" data-cols="two">
+        <div class="content flow">
+            <h2 class="mt-0">{{ about_section.title }}</h2>
+            {{ about_section.description |> md }}
+            <a class="button" href="/about">Lees verder</a>
+        </div>
+        <div class="">
+            <img class="image--rounded" src="{{ about_section.image }}" alt="Klessens Bouw Bus">
+        </div>
+    </div>
+</section>
+{{ include "partials/sections/testimonials.vto" }}
+{{ include "partials/sections/cta.vto" }}

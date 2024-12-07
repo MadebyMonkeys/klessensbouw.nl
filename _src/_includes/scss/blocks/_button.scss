@@ -1,0 +1,65 @@
+@use "../abstracts" as *;
+
+
+// -----------------------------------------------------------------------------
+// BUTTON
+// -----------------------------------------------------------------------------
+
+.button {
+    --_button-padding: var(--button-padding, #{$button-padding});
+    --_button-gap: var(--button-gap, #{$button-gap});
+
+    --_button-foreground: var(--button-foreground, #{$button-foreground});
+    --_button-foreground-hover: var(--button-foreground-hover, #{$button-foreground-hover});
+    --_button-foreground-active: var(--button-foreground-active, #{$button-foreground-active});
+
+    --_button-background: var(--button-background, #{$button-background});
+    --_button-background-hover: var(--button-background-hover, #{$button-background-hover});
+    --_button-background-active: var(--button-background-active, #{$button-background-active});
+
+    --_button-font-size: var(--button-font-size, #{$button-font-size});
+    --_button-font-weight: var(--button-font-weight, #{$button-font-weight});
+    --_button-text-transform: var(--button-text-transform, #{$button-text-transform});
+
+    --_button-border-width: var(--button-border-width, #{$button-border-width});
+    --_button-border-style: var(--button-border-style, #{$button-border-style});
+    --_button-border-color: var(--button-border-color, #{$button-border-color});
+    --_button-border-radius: var(--button-border-radius, #{$button-border-radius});
+
+    background: var(--_button-background);
+    color: var(--_button-foreground);
+    font-size: var(--_button-font-size);
+    font-weight: var(--_button-font-weight);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--_button-gap);
+    padding: var(--_button-padding);
+    border-width: var(--_button-border-width);
+    border-style: var(--_button-border-style);
+    border-color: var(--_button-border-color);
+    border-radius: var(--_button-border-radius);
+    max-width: fit-content;
+    text-decoration: none;
+    text-transform: var(--_button-text-transform);
+    transition: all 300ms ease-in-out;
+
+    &:is(:hover) {
+        color: var(--_button-foreground-hover);
+        background: var(--_button-background-hover);
+    }
+
+    &:is(:active) {
+        color: var(--_button-foreground-active);
+        background: var(--_button-background-active);
+    }
+
+    &[data-ghost-button] {
+        --button-background: transparent;
+        --button-border-color: currentColor;
+        --button-foreground: currentColor;
+
+        &:is(:hover) {
+            border-color: var(--_button-background-hover);
+        }
+    }
+}

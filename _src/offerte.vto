@@ -1,0 +1,104 @@
+---
+layout: layouts/base.vto
+
+title: Offerte aanvragen
+description: "offerte beschrijving"
+
+menu:
+  visible: true
+  button: true
+  title: Offerte aanvragen
+  url: "/offerte"
+  order: 8
+---
+<section class="[ offerte ] [ full-width ] [ region ]">
+    <form class="narrow flow" action="https://formsubmit.co/kleske@live.nl" enctype="multipart/form-data" method="POST">
+                    
+        <input type="hidden" name="_subject" value="Nieuwe offerte aanvraag">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="/offerte/bedankt">
+        
+        <div class="field-group">
+            <label for="werkzaamheden">Werkzaamheden</label>
+            <p class="field-description">Welke werkzaamheden wilt u uitvoeren</p>
+            <select name="werkzaamheden" id="werkzaamheden">
+                <option selected >Selecteer de werkzaamheden</option>
+                <option value="Traprenovatie">Bouw</option>
+                <option value="Deuren en Kozijnen">Onderhoud</option>
+                <option value="Schilderwerk">Renovatie</option>
+            </select>
+        </div>
+        
+        <div class="field-group">
+            <label for="beschrijving">Beschrijving</label>
+            <p class="field-description">Beschrijf de werkzaamheden in het kort</p>
+            <textarea name="" id="" cols="10" rows="5"></textarea>
+        </div>
+        
+        <div class="field-group">
+            <label for="attachment">Foto</label>
+            <p class="field-description">Gebruik <a href="https://imagecompressor.com/nl/" target="_blank">imagecompressor</a> om de bestandsgrote (aantal MB) van een foto te verkleinen.</p>
+            <input type="file" name="attachment" accept="image/png, image/jpeg">
+        </div>
+        
+        <div class="field-group">
+            <label for="tijd">Tijdsbestek</label>
+            <p class="field-description">Waneer wil u deze werkzaamheden beginnen</p>
+            <select  name="tijd" id="tijd">
+                <option value="" selected >Selecteer een optie</option>
+                <option value="spoed">Spoed uitvoering</option>
+                <optgroup label="week">
+                    <option value="week">1 week</option>
+                    <option value="twee_weken">2 weken</option>
+                    <option value="drie_weken">3 weken</option>
+                </optgroup>
+                <optgroup label="maand">
+                    <option value="maand">1 maand</option>
+                    <option value="twee_maanden">2 maanden</option>
+                    <option value="drie_maanden">3 maanden</option>
+                    <option value="zes_maanden">6 maanden</option>
+                </optgroup>
+                <optgroup label="overige">
+                    <option value="overleg">In overleg</option>
+                    <option value="geen">Geen plannen voor uitvoering</option>
+                </optgroup>
+            </select>
+        </div>
+        
+        <div class="field-group">
+            <label for="name">Naam</label>
+            <input  id="name" type="text" name="name" required>
+        </div>
+        
+        <div class="grid-auto-fit" data-cols="two">
+        
+            <div class="field-group">
+                <label for="address">Adres</label>
+                <input  id="address" type="text" name="adres" required>
+            </div>
+            
+            <div class="field-group">
+                <label for="zipcode">Postcode</label>
+                <input  id="zipcode" type="text" name="postcode" required>
+            </div>
+        
+        </div>
+        
+        <div class="field-group">
+            <label for="phone">Telefoon nr.</label>
+            <input  id="phone" type="tel" name="Telefoon nr" required>
+        </div>
+        
+        <div class="field-group">
+            <label for="email">Email</label>
+            <input  id="email" type="email" name="email" required>
+        </div>
+        
+        <div class="field-group">
+            <label for="message">Extra informatie</label>
+            <textarea  name="Extra informatie" id="message" cols="30" rows="10"></textarea>
+        </div>
+        
+        <button class="button" type="submit">Verzend</button>
+    </form> 
+</section>

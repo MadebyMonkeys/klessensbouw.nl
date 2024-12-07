@@ -1,0 +1,15 @@
+---
+layout: layouts/base.vto
+---
+<article class="[ about ] [ full-width ] [ region ]">
+    <div class="grid-auto-fit ai-center" data-cols="two">
+        <div class="content flow">
+            {{- content -}}
+        </div>
+        <div class="about__image">
+            <img class="image--rounded" src="{{ image }}" alt="{{ image_alt }}">
+        </div>
+    </div>
+</article>
+{{ include "partials/sections/testimonials.vto" }}
+{{ include "partials/sections/cta.vto" }}

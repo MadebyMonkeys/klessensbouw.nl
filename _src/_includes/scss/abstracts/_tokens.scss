@@ -1,0 +1,90 @@
+@use "colors" as *;
+
+// -----------------------------------------------------------------------------
+// THEME
+// -----------------------------------------------------------------------------
+
+$active-theme: $light;
+$enable-media-prefers-dark-mode: false;
+
+
+$flex-group-gap: var(--space-s-l);
+
+$input-select-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+
+// -----------------------------------------------------------------------------
+// GLOBALS
+// -----------------------------------------------------------------------------
+
+$body-foreground: var(--neutral-600);
+$body-background: var(--background-color);
+$body-font-family: var(--ff-base);
+$body-font-size: var(--fs-400);
+$body-font-weight: var(--fw-regular);
+$body-line-height: 1.5;
+
+
+$heading-font-family: var(--ff-accent);
+$heading-font-size: inherit;
+$heading-font-weight: var(--fw-bold);
+$heading-line-height: 1.1;
+
+
+
+// -----------------------------------------------------------------------------
+// SITE HEADER
+// -----------------------------------------------------------------------------
+
+$site-header-background: transparent;
+$site-header-padding: var(--space-s);
+
+
+
+// -----------------------------------------------------------------------------
+// SITE NAVIGATION
+// -----------------------------------------------------------------------------
+
+$site-nav-order: 3;
+
+$site-nav-list-gap: var(--space-3xs);
+
+$site-nav-link-color: var(--neutral-500);
+$site-nav-link-color-hover: var(--neutral-800);
+$site-nav-link-color-active: var(--neutral-50);
+
+$site-nav-link-background: transparent;
+$site-nav-link-background-hover: var(--neutral-50);
+$site-nav-link-background-active: var(--neutral-950);
+
+$site-nav-link-padding: var(--space-2xs) var(--space-s);
+$site-nav-link-border-radius:var(--space-3xs);
+
+$site-nav-link-text-decoration: none;
+
+
+
+// -----------------------------------------------------------------------------
+// BUTTONS
+// -----------------------------------------------------------------------------
+
+$button-foreground: var(--neutral-50);
+$button-foreground-hover: var(--neutral-50);
+$button-foreground-active: var(--neutral-50);
+
+$button-background: var(--neutral-800);
+$button-background-hover: var(--neutral-900);
+$button-background-active: var(--neutral-950);
+
+$button-font-size: var(--fs-300);
+$button-font-weight: var(--fw-semibold);
+
+$button-text-transform: uppercase;
+
+$button-padding: var(--space-xs) var(--space-s);
+$button-gap: var(--space-3xs);
+
+$button-border-width: 3px;
+$button-border-style: solid;
+$button-border-color: var(--_button-background);
+$button-border-radius: var(--space-3xs);

@@ -1,0 +1,14 @@
+<header class="[ site-header ] [ full-width ] []">
+    <div class="site-header__inner">
+        <a href="/" class="brand">
+            {{ if site.brand.logo }}
+                <img src="{{ site.brand.logo }}" inline />
+            {{ else }}
+                <span>{{ site.brand.name }}</span>
+            {{ /if }}
+        </a>
+
+        {{ include "partials/shared/site-nav.vto" }}
+        
+    </div>
+</header>
