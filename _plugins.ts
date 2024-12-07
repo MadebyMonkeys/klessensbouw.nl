@@ -8,27 +8,6 @@ import slugify_urls from "lume/plugins/slugify_urls.ts";
 import svgo from "lume/plugins/svgo.ts";
 import transform_images from "lume/plugins/transform_images.ts";
 
-const site = lume({ src: "_src" });
-
-site.filter(
-  "getRelatedPosts",
-  (postsList, tags) =>
-    postsList.filter((post) => {
-      for (let tag of tags) {
-        if (post.tags.includes(tag)) return post;
-      }
-    }),
-);
-
-site.use(date());
-site.use(esbuild({ target: "es6" }));
-site.use(inline());
-site.use(metas());
-site.use(sass());
-site.use(slugify_urls());
-site.use(svgo());
-site.use(transform_images());
-
 export default function () {
   return (site: Site) => {
     site
