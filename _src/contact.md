@@ -2,7 +2,10 @@
 layout: layouts/contact.vto
 
 title: Contact
-description: Contact description
+description: Neem contact op
+
+metas:
+  description: =description
 
 menu:
   visible: true

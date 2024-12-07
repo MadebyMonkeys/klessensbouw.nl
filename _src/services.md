@@ -4,6 +4,9 @@ layout: layouts/services.vto
 title: Diensten
 description: "Diensten van KBT"
 
+metas:
+  description: =description
+
 image: "/img/kbt-diensten.webp"
 
 menu:

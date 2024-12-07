@@ -4,6 +4,9 @@ layout: layouts/about.vto
 title: Over ons
 description: Some cool description
 
+metas:
+  description: "KBT is in 2007 ontstaan uit het (handmatig) verlijmen van kalkzandsteen elementen in de ruwbouw. Inmiddels verzorgt KBT graag uw klus of opdracht voor bedrijf en particulier."
+
 image: "/img/kbt-personeel.webp"
 image_alt: Some cool description
 
