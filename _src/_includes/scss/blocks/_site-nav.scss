@@ -8,6 +8,7 @@
     display: none;
     width: 100%;
     order: #{$site-nav-order};
+    padding-block: var(--space-l);
 
     &__list {
         --_nav-list-gap: var(--nav-list-gap, #{$site-nav-list-gap});
@@ -62,9 +63,10 @@
 
 
 // Media query
-@media (width > 768px) {
+@media (width > 950px) {
     .site-nav {
         display: flex;
+        padding-block: 0;
 
         &,
         &__item {

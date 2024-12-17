@@ -1,4 +1,3 @@
-import lume from "lume/mod.ts";
 import date from "lume/plugins/date.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import inline from "lume/plugins/inline.ts";

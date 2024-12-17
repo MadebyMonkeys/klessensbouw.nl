@@ -28,7 +28,7 @@ $body-line-height: 1.5;
 $heading-font-family: var(--ff-accent);
 $heading-font-size: inherit;
 $heading-font-weight: var(--fw-bold);
-$heading-line-height: 1.1;
+$heading-line-height: 1;
 
 
 
@@ -38,6 +38,17 @@ $heading-line-height: 1.1;
 
 $site-header-background: transparent;
 $site-header-padding: var(--space-s);
+
+
+//
+// Hamburger
+//
+$hamburger-padding: var(--size-2xs);
+
+$hamburger-icon-foreground: var(--neutral-950);
+$hamburger-icon-width: 3ex;
+$hamburger-icon-stroke-width: 7px;
+$hamburger-icon-animation-timing: 600ms;
 
 
 
@@ -57,7 +68,7 @@ $site-nav-link-background: transparent;
 $site-nav-link-background-hover: var(--neutral-50);
 $site-nav-link-background-active: var(--neutral-950);
 
-$site-nav-link-padding: var(--space-2xs) var(--space-s);
+$site-nav-link-padding: var(--space-xs) var(--space-m);
 $site-nav-link-border-radius:var(--space-3xs);
 
 $site-nav-link-text-decoration: none;

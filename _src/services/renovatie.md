@@ -1,7 +1,7 @@
 ---
 title: "Renovatie"
 description: "Renovatie met oog voor uw wensen! Wij combineren kwaliteit, functionaliteit en stijl om uw woning perfect te vernieuwen en herstellen."
-icon: "/img/icons/renovatie.svg"
+icon: "/icons/renovatie.svg"
 image: "/img/kbt-renovatie.webp"
 ---
 

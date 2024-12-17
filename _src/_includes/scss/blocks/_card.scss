@@ -9,10 +9,14 @@
     display: flex;
     flex-direction: column;
     border-radius: var(--space-2xs);
-    padding: var(--space-m);
     transition: all 300ms ease;
+    overflow: clip;
 
     &:is(:hover) {
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    &__content {
+        padding: var(--space-m);
     }
 }

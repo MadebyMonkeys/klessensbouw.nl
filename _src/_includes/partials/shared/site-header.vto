@@ -7,7 +7,16 @@
                 <span>{{ site.brand.name }}</span>
             {{ /if }}
         </a>
-
+        <button class="hamburger" aria-controls="site-nav" aria-expanded="false">
+            <span class="visually-hidden">menu</span>
+            <svg class="hamburger__icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <g stroke-linecap="round">
+                    <line class="line line--1" x1="8" y1="16" x2="56" y2="16" />
+                    <line class="line line--2" x1="16" y1="32" x2="48" y2="32" />
+                    <line class="line line--3" x1="8" y1="48" x2="56" y2="48" />
+                </g>
+            </svg>
+        </button>
         {{ include "partials/shared/site-nav.vto" }}
         
     </div>

@@ -16,3 +16,11 @@ address:
   city: Oisterwijk
 
 kvk_nummer: 66713943
+
+socials:
+  - name: facebook
+    icon: facebook
+    url: "https://www.facebook.com/klessensbouw/"
+  - name: youtube
+    icon: youtube
+    url: "https://www.youtube.com/@KBT-Oisterwijk/"

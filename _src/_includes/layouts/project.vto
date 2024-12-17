@@ -2,6 +2,14 @@
 layout: layouts/base.vto
 ---
 
-<article class="[ project ] [ narrow ] [ region ]">
+<article class="[ project ] [ narrow ] [ region flow ]">
+    <h1 class="mt-0">{{ title }}</h1>
     {{- content -}}
+    <div class="gallery [ grid-auto-fit ]" data-cols="three" data-rows="masonry">
+        {{ for image of images }}
+            <a class="gallery__item" href="{{ image.url }}">
+                <img class="gallery__image" src="{{ image.url }}" alt="{{ image.title }}">
+            </a>
+        {{ /for }}
+    </div>
 </article>

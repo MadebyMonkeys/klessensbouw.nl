@@ -7,10 +7,17 @@ layout: layouts/base.vto
         <div class="content flow">
             {{ content }}
 
-            <ul class="company-info-list" role="list">
-                <li><ion-icon name="pin"></ion-icon> {{ site.address.street }} <br> {{ site.address.zipcode }} {{ site.address.city }}</li>
-                <li><ion-icon name="call"></ion-icon> <a href="{{ site.phone }}">{{ site.phone }}</a></li>
-                <li><ion-icon name="mail"></ion-icon> {{ site.email }}</li>
+            <ul class="company-info flow" role="list">
+                <li class="flex-group ai-center"><ion-icon size="large" name="location"></ion-icon> {{ site.address.street }} <br> {{ site.address.zipcode }} {{ site.address.city }}</li>
+                <li class="flex-group ai-center"><ion-icon size="large" name="call"></ion-icon> <a href="tel:{{ site.phone }}">{{ site.phone }}</a></li>
+                <li class="flex-group ai-center"><ion-icon size="large" name="mail"></ion-icon> {{ site.email }}</li>
+                <li class="socials flow">
+                    <div class="social-links">
+                        {{ for social of site.socials }}
+                            <a href="{{ social.url }}" class="link"><ion-icon size="xlarge" name="logo-{{ social.icon }}"></ion-icon></a>
+                        {{ /for }}
+                    </div>
+                </li>
             </ul>
         </div>
 
