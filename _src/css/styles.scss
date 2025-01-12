@@ -228,6 +228,10 @@ textarea {
     &--card {
       padding: var(--space-m);
       margin-inline: var(--space-s);
+
+      p {
+        max-width: unset;
+      }
     }
   }
 }
