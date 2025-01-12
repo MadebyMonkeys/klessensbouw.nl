@@ -1,113 +1,106 @@
-
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Prevent font size inflation */
 html {
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
-    hanging-punctuation: first last;
-    scroll-behavior: smooth;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  hanging-punctuation: first last;
+  scroll-behavior: smooth;
+  interpolate-size: allow-keywords;
 
-    @media (prefers-reduce-motion: no-preference) {}
+  @media (prefers-reduce-motion: no-preference) {}
 }
 
 /* Remove default margin in favour of better control in authored CSS */
-h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-    margin-block-end: 0;
+h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin-block-end: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-    list-style: none;
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
 }
 
 [role="list"] {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 /* Set core body defaults */
 body {
-    margin: 0;
-    min-height: 100vh;
+  margin: 0;
+  min-height: 100vh;
 }
 
 /* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-    line-height: 1.1;
+h1, h2, h3, h4, button, input, label {
+  line-height: 1.1;
 }
 
 /* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-    text-wrap: balance;
+h1, h2, h3, h4 {
+  max-width: 20ch;
+  text-wrap: balance;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-    text-decoration-skip-ink: auto;
-    color: currentColor;
+  text-decoration-skip-ink: auto;
+  color: currentColor;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
-    font-family: inherit;
-    font-size: inherit;
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
 }
 
 /* Make sure textareas without a rows attribute are not tiny */
 textarea:not([rows]) {
-    min-height: 10em;
+  min-height: 10em;
 }
 
-p,li,
-blockquote:not([class]) {
-    max-width: 50ch;
+p, li, blockquote:not([class]) {
+  max-width: 50ch;
 }
-
 
 blockquote:not([class]) {
-    font-family: var(--ff-serif);
-    font-size: var(--fs-400);
+  font-family: var(--ff-serif);
+  font-size: var(--fs-400);
 
-    p:last-of-type {
-        font-family: var(--ff-sans);
-        font-size: var(--fs-300);
-        font-weight: var(--fw-regular);
-    }
+  p:last-of-type {
+    font-family: var(--ff-sans);
+    font-size: var(--fs-300);
+    font-weight: var(--fw-regular);
+  }
 }
-
 
 svg {
-    height: 2ex;
-    width: auto;
-    flex: none;
+  height: 2ex;
+  width: auto;
+  flex: none;
 }
 
-
 :focus {
-    outline: 2px solid;
-    outline-offset: 0.3ch;
+  outline: 2px solid var(--accent-150);
+  outline-offset: 0.3ch;
 }
 
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
-    scroll-margin-block: 5ex;
+  scroll-margin-block: 5ex;
 }

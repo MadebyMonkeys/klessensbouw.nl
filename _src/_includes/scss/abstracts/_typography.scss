@@ -1,25 +1,14 @@
-@font-face {
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Playfair Display'), local('Playfair-Display'),
-      url("/fonts/PlayfairDisplay-VariableFont_wght.ttf")
-      format('ttf');
-    font-display: swap;
-  }
-  
-
 // -----------------------------------------------------------------------------
 //  FONT FAMILIES
 // -----------------------------------------------------------------------------
 
 $-ff-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$-ff-serif: "Playfair Display", serif;
+$-ff-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 $-ff-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 $font-families: (
-    "base": #{$-ff-sans},
-    "accent": #{$-ff-serif},
+    "sans": #{$-ff-sans},
+    "serif": #{$-ff-serif},
     "mono": #{$-ff-mono},
 );
 

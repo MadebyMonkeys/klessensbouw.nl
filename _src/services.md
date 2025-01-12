@@ -1,29 +1,28 @@
 ---
-layout: layouts/services.vto
+layout: layouts/pages/services.vto
 
-title: Diensten
-description: "Diensten van KBT"
+templateEngine: "md, vto"
 
-metas:
-  description: =description
-
-image: "/img/kbt-diensten.webp"
+title: "Diensten"
+description: Diensten pagina beschrijving
 
 menu:
   visible: true
   title: Diensten
-  url: /services
+  url: "/services"
   order: 3
 
+section_services:
+  subtitle: "Diensten"
+  title: "Diensten waarmee wij u kunnen helpen"
 
-cta_section:
-  title: Waar wacht u nog op vraag een gratis offerte aan!
-  button:
-    title: vraag offerte aan
-    url: "/offerte"
+section_two:
+  subtitle: "Werkwijzen"
+  title: "Zo gaan wij te werk"
+  image:
+    url: "/images/kbt-diensten.webp"
+    alt: "Diensten foto"
 ---
-
-# Onze werkwijzen
 
 Na het eerste contact plannen wij een afspraak en bezoeken we de locatie van het
 project. Dit stelt ons in staat om de huidige situatie en uw gewenste

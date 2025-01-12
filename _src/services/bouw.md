@@ -2,7 +2,7 @@
 title: "Bouw"
 description: "Wij bieden (ver)bouwoplossingen, van droomontwerp tot afwerking, en realiseren uw project professioneel en zorgeloos."
 icon: "/icons/bouw.svg"
-image: "/img/kbt-bouw.webp"
+image: "/images/kbt-bouw.webp"
 ---
 
 # We bouwen voor u

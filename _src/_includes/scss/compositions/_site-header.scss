@@ -7,7 +7,8 @@
 
 .site-header {
     position: relative;
-    padding: #{$site-header-padding};
+    padding-block: #{$site-header-padding-block};
+    padding-inline: #{$site-header-padding-inline};
     z-index: 999;
 
     &__inner {

@@ -8,17 +8,17 @@
 
 .page-layout,
 .full-width {
-    --page-layout-gap: 2em;
+    --_page-layout-gap: var(--page-layout-gap, #{$page-layout-gap});
 
-    --page-layout-full-max-width: 1fr;
-    --page-layout-popout-max-width: 1640px;
-    --page-layout-content-max-width: 1350px;
-    --page-layout-narrow-max-width: 1060px;
+    --_page-layout-full-max-width: var(--page-layout-full-max-width, 1fr);
+    --_page-layout-popout-max-width: var(--page-layout-popout-max-width, #{$page-layout-popout-width});
+    --_page-layout-content-max-width: var(--page-layout-content-max-width, #{$page-layout-content-width});
+    --_page-layout-narrow-max-width: var(--page-layout-narrow-max-width, #{$page-layout-narrow-width});
 
-    --page-layout-full: minmax(var(--page-layout-gap), 1fr);
-    --page-layout-popout: minmax(0, calc((var(--page-layout-popout-max-width) - var(--page-layout-content-max-width)) * 0.5));
-    --page-layout-content: minmax(0, calc((var(--page-layout-content-max-width) - var(--page-layout-narrow-max-width)) * 0.5));
-    --page-layout-narrow: min( var(--page-layout-narrow-max-width), 100% - (var(--page-layout-gap) * 2) );
+    --page-layout-full: minmax(var(--_page-layout-gap), 1fr);
+    --page-layout-popout: minmax(0, calc((var(--_page-layout-popout-max-width) - var(--_page-layout-content-max-width)) * 0.5));
+    --page-layout-content: minmax(0, calc((var(--_page-layout-content-max-width) - var(--_page-layout-narrow-max-width)) * 0.5));
+    --page-layout-narrow: min( var(--_page-layout-narrow-max-width), 100% - (var(--_page-layout-gap) * 2) );
 
     display: grid;
     grid-template-columns:

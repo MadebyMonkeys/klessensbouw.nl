@@ -1,33 +1,23 @@
 @use "../abstracts" as *;
 
-// -----------------------------------------------------------------------------
-//
-// -----------------------------------------------------------------------------
-
 :root {
-
     @each $prop, $value in $font-families {
         --ff-#{$prop}: #{$value};
     }
-
 
     @each $prop, $value in $font-sizes {
         --fs-#{$prop}: #{$value};
     }
 
-
     @each $prop, $value in $font-weights {
         --fw-#{$prop}: #{$value};
     }
-
 
     // Spacings
     @each $prop, $value in $spaces {
         --space-#{$prop}: #{$value};
     }
 
-
-    
     // Color(s)
     @each $color, $shade-map in $active-theme {
         @each $shade, $value in $shade-map {

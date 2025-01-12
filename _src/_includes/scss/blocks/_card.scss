@@ -1,22 +1,26 @@
 @use "../abstracts" as *;
 
 // -----------------------------------------------------------------------------
-// CARD
+// Card
 // -----------------------------------------------------------------------------
 
 .card {
-    background: white;
-    display: flex;
-    flex-direction: column;
-    border-radius: var(--space-2xs);
-    transition: all 300ms ease;
-    overflow: clip;
+    --_card-background: var(--card-background, #{$card-background});
+    --_card-border-radius: var(--card-border-radius, #{$card-border-radius});
+    --_card-content-padding: var(--card-content-padding, #{$card-content-padding});
 
-    &:is(:hover) {
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --_card-box-shadow: var(--card-box-shadow, #{$card-box-shadow});
+
+    background: var(--_card-background);
+    display: grid;
+    border-radius: var(--_card-border-radius);
+    box-shadow: var(--_card-box-shadow);
+
+    &:is(:hover, :focus-visible) {
+        --_card-box-shadow: #{$card-box-shadow-hover}
     }
 
     &__content {
-        padding: var(--space-m);
+        padding: var(--_card-content-padding);
     }
 }

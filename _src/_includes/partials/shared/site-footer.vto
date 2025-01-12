@@ -1,10 +1,20 @@
 <footer class="[ site-footer ] [ full-width ] [ region ]">
-    <small>&copy; Copyright {{ site.year }} by <a href="/">{{ site.brand.name }}</a> | kvk {{ site.kvk_nummer }}</small>
+    <div class="flex-group jc--between">
+        <p class="mt-0">&copy; Copyright 2024 by <a href="/">{{ company.name }}</a> &ndash; kvk {{ company.kvk }}</p>
+        <div class="">
+            <a href="/algemene-voorwaarden">Algemene Voorwaarden</a>
+        </div>
+    </div>
 </footer>
 
 <script src="/js/main.js"></script>
+
 {{ if hasCarousel == true }}
     <script src="/js/carousel.js"></script>
+{{ /if }}
+
+{{ if hasLightbox == true }}
+    <script src="/js/fslightbox.js"></script>
 {{ /if }}
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

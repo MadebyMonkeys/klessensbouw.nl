@@ -1,14 +1,7 @@
 ---
-layout: layouts/about.vto
+layout: layouts/pages/about.vto
 
-title: Over ons
-description: Some cool description
-
-metas:
-  description: "KBT is in 2007 ontstaan uit het (handmatig) verlijmen van kalkzandsteen elementen in de ruwbouw. Inmiddels verzorgt KBT graag uw klus of opdracht voor bedrijf en particulier."
-
-image: "/img/kbt-personeel.webp"
-image_alt: Some cool description
+hasCarousel: true
 
 menu:
   visible: true
@@ -16,31 +9,29 @@ menu:
   url: "/about"
   order: 2
 
-testimonial_section:
-  title: "Deze mensen gingen uw voor"
+about_section:
+  subtitle: Over Ons
+  title: Over Klessensbouw
+  image:
+    url: "/images/kbt-dorus.webp"
+    alt: "Profiel foto"
 
-cta_section:
-  title: Werk met ons om uw idee tot een werkelijkeheid te maken!
-  button:
-    title: vraag offerte aan
-    url: "/offerte"
+testimonial_section:
+  subtitle: Reviews
+  title: "Wat andere over KBT zeggen"
 ---
 
-# Over KBT
+KBT is in 2007 ontstaan uit het (handmatig) verlijmen van kalkzandsteen
+elementen in de ruwbouw. Inmiddels verzorgt KBT graag uw klus of opdracht voor
+bedrijf en particulier. Van het verwijderen van muren en het plaatsen van
+(binnen)muren van steen, metal stud/gips of anderzijds tot het texen van uw
+wanden of het vervangen van uw vloer, keuken of laminaat. Kortom; we bouwen voor
+u en uw wensen. We staan klaar voor u op het gebied van aan/verbouw, renovatie,
+sloopwerk, klussen en stucwerk.
 
-KBT is in 2007 opgericht en begon met het handmatig verlijmen van
-kalkzandsteenelementen in de ruwbouw. Inmiddels zijn wij uitgegroeid tot een
-allround partner voor zowel particulieren als bedrijven. Of het nu gaat om het
-verwijderen of plaatsen van (binnen)muren van steen, metal stud/gips, of andere
-materialen, het texen van wanden, of het vervangen van vloeren, keukens, of
-laminaat: wij realiseren het voor u.
-
-Kortom, wij bouwen volgens uw wensen en staan klaar voor aan- en verbouw,
-renovatie, sloopwerk, klussen en stucwerk. Daarnaast denken we graag met u mee
-over mogelijkheden, kleurstellingen en afwerking.
-
-Om uw keuze makkelijker te maken, voorzien we u desgewenst van een
-voorbeeldmonster, zodat u het product kunt zien en voelen voordat u beslist.
-Bovendien kunnen we in veel gevallen een realistisch beeld schetsen van het
-eindresultaat met behulp van tekeningen of computeranimaties. Wij staan voor
-kwaliteit en klantgericht maatwerk!
+Uiteraard denken wij indien gewenst mee met de klant met betrekking tot
+bijvoorbeeld mogelijkheden, kleurstelling en afwerking. Graag komen we u
+voorzien van een voorbeeldmonster zodat u daadwerkelijk het product ziet en
+voelt alvorens tot een beslissing te komen. In veel gevallen kan KBT door middel
+van tekeningen of computeranimatie een reeël beeld geven van het werk na
+oplevering.

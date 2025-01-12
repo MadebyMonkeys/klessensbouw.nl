@@ -1,48 +1,53 @@
-@use "colors" as *;
+@use "./colors" as *;
 
 // -----------------------------------------------------------------------------
-// THEME
+// # THEME
 // -----------------------------------------------------------------------------
 
 $active-theme: $light;
 $enable-media-prefers-dark-mode: false;
 
-
+$grid-gap: var(--space-s-l);
 $flex-group-gap: var(--space-s-l);
 
 $input-select-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 
 
 // -----------------------------------------------------------------------------
-// GLOBALS
+// # GLOBALS
 // -----------------------------------------------------------------------------
 
-$body-foreground: var(--neutral-600);
-$body-background: var(--background-color);
-$body-font-family: var(--ff-base);
+// Body
+$body-foreground: var(--neutral-700);
+$body-background: white;
+
+$body-font-family: var(--ff-sans);
 $body-font-size: var(--fs-400);
 $body-font-weight: var(--fw-regular);
-$body-line-height: 1.5;
+$body-line-height: 1.618;
 
 
-$heading-font-family: var(--ff-accent);
+// Heading
+$heading-foreground: var(--neutral-950);
+$heading-font-family: var(--ff-serif);
 $heading-font-size: inherit;
 $heading-font-weight: var(--fw-bold);
-$heading-line-height: 1;
-
+$heading-line-height: 1.1;
 
 
 // -----------------------------------------------------------------------------
-// SITE HEADER
+// # SITE HEADER
 // -----------------------------------------------------------------------------
 
 $site-header-background: transparent;
-$site-header-padding: var(--space-s);
+$site-header-padding-block: var(--space-s);
+$site-header-padding-inline: 0;
 
 
-//
-// Hamburger
-//
+// -----------------------------------------------------------------------------
+// # HAMBURGER
+// -----------------------------------------------------------------------------
+
 $hamburger-padding: var(--size-2xs);
 
 $hamburger-icon-foreground: var(--neutral-950);
@@ -50,15 +55,21 @@ $hamburger-icon-width: 3ex;
 $hamburger-icon-stroke-width: 7px;
 $hamburger-icon-animation-timing: 600ms;
 
-
-
 // -----------------------------------------------------------------------------
-// SITE NAVIGATION
+// # SITE NAVIGATION
 // -----------------------------------------------------------------------------
 
 $site-nav-order: 3;
 
 $site-nav-list-gap: var(--space-3xs);
+
+$site-nav-link-font-size: var(--fs-400);
+
+$site-nav-link-text-decoration: none;
+$site-nav-link-text-transform: normal;
+
+$site-nav-link-padding: var(--space-xs) var(--space-m);
+$site-nav-link-border-radius:var(--space-3xs);
 
 $site-nav-link-color: var(--neutral-500);
 $site-nav-link-color-hover: var(--neutral-800);
@@ -68,29 +79,37 @@ $site-nav-link-background: transparent;
 $site-nav-link-background-hover: var(--neutral-50);
 $site-nav-link-background-active: var(--neutral-950);
 
-$site-nav-link-padding: var(--space-xs) var(--space-m);
-$site-nav-link-border-radius:var(--space-3xs);
 
-$site-nav-link-text-decoration: none;
+// -----------------------------------------------------------------------------
+// # PAGE LAYOUT
+// -----------------------------------------------------------------------------
 
+// Page-layout
+$page-layout-padding-inline: clamp(1rem, 6dvw, 3rem);
+$page-layout-gap: 2em;
+$page-layout-popout-width: 1640px;
+$page-layout-content-width: 1350px;
+$page-layout-narrow-width: 1060px;
 
 
 // -----------------------------------------------------------------------------
-// BUTTONS
+// # BUTTON
 // -----------------------------------------------------------------------------
 
-$button-foreground: var(--neutral-50);
-$button-foreground-hover: var(--neutral-50);
-$button-foreground-active: var(--neutral-50);
+$button-foreground: white;
+$button-foreground-hover: white;
+$button-foreground-active: white;
 
-$button-background: var(--neutral-800);
-$button-background-hover: var(--neutral-900);
-$button-background-active: var(--neutral-950);
+$button-background: var(--neutral-900);
+$button-background-hover: var(--neutral-800);
+$button-background-active: var(--neutral-850);
+
 
 $button-font-size: var(--fs-300);
 $button-font-weight: var(--fw-semibold);
 
-$button-text-transform: uppercase;
+$button-text-transform: auto;
+$button-letter-spacing: .15ch;
 
 $button-padding: var(--space-xs) var(--space-s);
 $button-gap: var(--space-3xs);
@@ -99,3 +118,19 @@ $button-border-width: 3px;
 $button-border-style: solid;
 $button-border-color: var(--_button-background);
 $button-border-radius: var(--space-3xs);
+
+
+
+// -----------------------------------------------------------------------------
+// # CARD
+// -----------------------------------------------------------------------------
+
+$card-background: white;
+
+$card-border-radius: var(--space-xs);
+
+$card-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$card-box-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+
+$card-content-padding: var(--space-m);

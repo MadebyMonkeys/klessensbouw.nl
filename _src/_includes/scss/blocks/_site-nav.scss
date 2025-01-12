@@ -27,6 +27,8 @@
 
 
     &__link {
+        --_nav-link-font-size: var(--nav-link-font-size, #{$site-nav-link-font-size});
+        --_nav-link-text-transform: var(--nav-link-text-transform, #{$site-nav-link-text-transform});
         --_nav-link-padding: var(--nav-link-padding, #{$site-nav-link-padding});
         --_nav-link-color: var(--nav-link-color, #{$site-nav-link-color});
         --_nav-link-background: var(--nav-link-background, #{$site-nav-link-background});
@@ -35,11 +37,13 @@
         --_nav-link-text-decoration: var(--nav-link-text-decoration, #{$site-nav-link-text-decoration});
 
         display: inline-block;
+        font-size: var(--_nav-link-font-size);
         color: var(--_nav-link-color);
         background: var(--_nav-link-background);
         padding: var(--_nav-link-padding);
         border-radius: var(--_nav-link-border-radius);
         text-decoration: var(--_nav-link-text-decoration);
+        text-transform: var(--_nav-link-text-transform);
 
         &:is(:hover, :focus-visible) {
             --nav-link-color: #{$site-nav-link-color-hover};
@@ -63,7 +67,7 @@
 
 
 // Media query
-@media (width > 950px) {
+@media (width > 1150px) {
     .site-nav {
         display: flex;
         padding-block: 0;

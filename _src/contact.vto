@@ -1,0 +1,68 @@
+---
+layout: layouts/page.vto
+
+title: Contact
+description: Some contact description
+
+metas:
+  title: =title
+  description: =description
+
+menu:
+  visible: true
+  title: Contact
+  url: "/contact"
+  order: 5
+
+contact_section:
+  subtitle: Contact
+  title: Kom in contact
+  body: "Mocht u verder nog vragen hebben stel deze dan gerust! Wij zullen deze zo spoedig mogelijk beantwoorden."
+
+---
+
+<section class="[ contact ] [] [ region ]">
+    <div class="grid-auto-fit" data-cols="two">
+        <div class="content flow">
+            <span class="block--subtitle">{{ contact_section.subtitle }}</span>
+            <h2 class="block--title">{{ contact_section.title }}</h2>
+            <p>{{ contact_section.body }}</p>
+            <ul class="company-info flow" role="list">
+                <li class="flex-group ai--center"><ion-icon name="pin"></ion-icon> {{ company.address.street }} <br> {{ company.address.zipcode }} {{ company.address.city }}</li>
+                <li class="flex-group ai--center"><ion-icon name="call"></ion-icon> <a href="tel:{{ company.contact.phone }}">{{ company.contact.phone }}</a></li>
+                <li class="flex-group ai--center"><ion-icon name="mail"></ion-icon> {{ company.contact.email }}</li>
+                <li class="socials flow">
+                    <h3>Volg ons</h3>
+                    <div class="social-links">
+                        {{ for social of company.socials }}
+                            <a href="{{ social.url }}" class="link"><ion-icon size="xlarge" name="{{ social.icon }}"></ion-icon></a>
+                        {{ /for }}
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <form action="https://formsubmit.co/kleske@live.nl" method="POST" name="contact" class="[ flow ]">
+            <div class="field-group">
+                <label for="naam">Naam</label>
+                <input type="text" id="naam" name="naam" />
+            </div>
+            
+            <div class="field-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" />
+            </div>
+        
+            <div class="field-group">
+                <label for="onderwerp">Onderwerp</label>
+                <input type="text" id="onderwerp" name="onderwerp" />
+            </div>
+        
+            <div class="field-group">
+                <label for="bericht">Uw bericht</label>
+                <textarea id="bericht" name="bericht" rows="10" class=""></textarea>
+            </div>
+            
+            <button class="button" type="submit">Verzend</button>
+        </form>
+    </div>
+</section>

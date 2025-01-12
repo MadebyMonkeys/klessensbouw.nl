@@ -1,0 +1,31 @@
+---
+layout: layouts/page.vto
+---
+
+<section class="[ services ] [] [ region flow ]">
+    <span class="block--subtitle">{{ section_services.subtitle }}</span>
+    <h2 class="block--title">{{ section_services.title }}</h2>
+    <div class="grid-auto-fit" data-cols="three">
+        {{ set services = search.pages("type=service", "order=desc").slice(0, 3) }}
+        {{ for service of services }}
+        <div class="card service--card flow">
+            <img class="icon" src="{{ service.icon }}" inline />
+            <h3>{{ service.title }}</h3>
+            <p>{{ service.description }}</p>
+            <a href="{{ service.url }}" class="button">Lees verder</a>
+        </div>
+        {{ /for }}
+    </div>
+</section>
+<section class="[ werkwijzen ] [ full-width ] [ region bgcolor-neutral-50 ]">
+    <div class="grid-auto-fit" data-cols="two">
+        <div class="flow">
+            <span class="block--subtitle">{{ section_two.subtitle }}</span>
+            <h2 class="block--title">{{ section_two.title }}</h2>
+            {{ content }}
+        </div>
+        <div>
+            <img class="image--rounded" src="{{ section_two.image.url }}" alt="{{ section_two.image.alt }}">
+        </div>
+    </div>
+</section>

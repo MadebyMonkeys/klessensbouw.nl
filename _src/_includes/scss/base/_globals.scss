@@ -1,13 +1,12 @@
 @use "../abstracts" as *;
 
-
 // -----------------------------------------------------------------------------
-// TYPOGRAPHY
+// Body Settings
 // -----------------------------------------------------------------------------
 
 body {
-    --_body-foreground: var(--body-foreground, #{$body-foreground});
-    --_body-background: var(--body-background, #{$body-background});
+    --_body-foreground: var(--body-foregroun, #{$body-foreground});
+    --_body-background: var(--body-backgroun, #{$body-background});
     --_body-font-family: var(--body-font-family, #{$body-font-family});
     --_body-font-size: var(--body-font-size, #{$body-font-size});
     --_body-font-weight: var(--body-font-weight, #{$body-font-weight});
@@ -22,26 +21,29 @@ body {
 }
 
 
+// -----------------------------------------------------------------------------
+// Heading Settings
+// -----------------------------------------------------------------------------
+
 h1, h2, h3 {
+    --_heading-foreground: var(--heading-foreground, #{$heading-foreground});
     --_heading-font-family: var(--heading-font-family, #{$heading-font-family});
     --_heading-font-size: var(--heading-font-size, #{$heading-font-size});
     --_heading-font-weight: var(--heading-font-weight, #{$heading-font-weight});
     --_heading-line-height: var(--heading-line-height, #{$heading-line-height});
 
+    color: var(--_heading-foreground);
     font-family: var(--_heading-font-family);
     font-size: var(--_heading-font-size);
     font-weight: var(--_heading-font-weight);
     line-height: var(--_heading-line-height);
-    max-width: 20ch;
 }
 
 
-a:not([class]) {
-    color: var(--link-color, var(--primary-250));
-    text-decoration: none;
-    
-    &:is(:hover, :focus-visible) {
-        --link-color: var(--neutral-750);
-        text-decoration: underline;
-    }
+// -----------------------------------------------------------------------------
+// Anchor Settings
+// -----------------------------------------------------------------------------
+
+a:not(:has([class])) {
+    --_anchor-foreground: ;
 }

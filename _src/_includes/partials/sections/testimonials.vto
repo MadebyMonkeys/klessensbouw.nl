@@ -1,6 +1,9 @@
 <section class="[ testimonials ] [ full-width flow ] [ region ]">
-    <div class="flex-group">
-        <h2 class="block__title">{{ testimonial_section.title }}</h2>
+    <div class="flex-group jc--between">
+        <span>
+            <span class="block--subtitle">{{ testimonial_section.subtitle }}</span>
+            <h2 class="block--title">{{ testimonial_section.title }}</h2>
+        </span>
         <div class="controls">
             <button class="button carousel__button carousel__button--prev" data-toggle="prev" data-carousel-id="1" aria-label="next"><ion-icon size="large" name="arrow-back-outline"></ion-icon></button>
             <button class="button carousel__button carousel__button--next" data-toggle="next" data-carousel-id="1" aria-label="previous"><ion-icon size="large" name="arrow-forward-outline"></ion-icon></button>
@@ -10,11 +13,9 @@
         <div class="carousel__track">
         {{ for testimonial of testimonials }}
             <div class="carousel__item">
-                <div class="card">
-                    <div class="card__content flow">
-                        <i>{{ testimonial.body |> md }}</i>
-                        <span>&ndash; <strong>{{ testimonial.name }}</strong></span>
-                    </div>
+                <div class="card testimonial--card flow">
+                    <i>{{ testimonial.body |> md }}</i>
+                    <span>&ndash; <strong>{{ testimonial.name }}</strong></span>
                 </div>
             </div>
         {{ /for }}

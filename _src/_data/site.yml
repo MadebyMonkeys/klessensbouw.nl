@@ -1,26 +1,16 @@
-name: "Klessens Bouw"
-description: "Some cool description"
+root: "https://klessensbouw.nl"
+name: KBT
+description: "Uw partner in klussen"
 
-year: 2024
+analytics:
+  google_id: ""
+  umami_id: ""
 
-brand:
-  logo: "/img/kbt-logo.svg"
-  name: "Klessens Bouw"
-
-email: info@klessensbouw.nl
-phone: +31 132 032 856
-
-address:
-  street: Pannenschuurlaan 68
-  zipcode: 5061 DT
-  city: Oisterwijk
-
-kvk_nummer: 66713943
-
-socials:
-  - name: facebook
-    icon: facebook
-    url: "https://www.facebook.com/klessensbouw/"
-  - name: youtube
-    icon: youtube
-    url: "https://www.youtube.com/@KBT-Oisterwijk/"
+metas:
+  site: =name
+  title: =title
+  description: =description
+  image: =image
+  twitter: ""
+  lang: en
+  generator: true

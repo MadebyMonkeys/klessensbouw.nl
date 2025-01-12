@@ -2,7 +2,7 @@
 title: "Onderhoud"
 description: "Geen huis is perfect, maar wij zorgen dat het dat wel wordt! Voor elk type woning bieden wij maatwerk onderhoud."
 icon: "/icons/onderhoud.svg"
-image: "/img/kbt-onderhoud.webp"
+image: "/images/kbt-onderhoud.webp"
 ---
 
 # Onderhoud loont

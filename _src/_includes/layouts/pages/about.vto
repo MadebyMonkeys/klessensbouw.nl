@@ -1,0 +1,15 @@
+---
+layout: layouts/page.vto
+---
+
+<section class="[ aboutus ] [] [ region ]">
+    <div class="grid-auto-fit" data-col="two">
+        <div class="content flow">
+        <span class="block--subtitle">{{ about_section.subtitle }}</span>
+        <h2 class="block--title">{{ about_section.title }}</h2>
+        <p>{{ content }}</p>
+        </div>
+        <img class="image--rounded" src="{{ about_section.image.url }}" alt="{{ about_section.image.alt }}">
+    </div>
+</section>
+{{ include "partials/sections/testimonials.vto" }}

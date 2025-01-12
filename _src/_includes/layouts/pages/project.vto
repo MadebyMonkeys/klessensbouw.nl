@@ -1,0 +1,20 @@
+---
+layout: layouts/page.vto
+hasLightbox: true
+---
+
+<section class="[ project ] [ narrow ] [ region flow ]">
+    <span class="block--subtitle">Project details</span>
+    <h1 class="block--title">{{ title }}</h1>
+    {{- content -}}
+</section>
+
+<section class="">
+    <div class="gallery grid-auto-fit" data-cols="three" data-rows="masonry">
+        {{ for image of images }}
+            <a data-fslightbox="gallery" class="gallery__item" href="{{ image.url }}">
+                <img class="image--rounded" src="{{ image.url }}" alt="{{ image.alt }}">
+            </a>
+        {{ /for }}
+    </div>
+</section>
