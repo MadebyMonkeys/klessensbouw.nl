@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.vto
 ---
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 {{ set services = search.pages("type=service", "order=desc").slice(0, 3) }}
 {{ set projects = search.pages("type=project", "order=desc").slice(0, 3) }}
