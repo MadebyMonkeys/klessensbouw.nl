@@ -12,9 +12,7 @@ menu:
 about_section:
   subtitle: Over Ons
   title: Over Klessensbouw
-  image:
-    url: "/images/kbt-dorus.webp"
-    alt: "Profiel foto"
+  image: "/images/kbt-dorus.webp"
 
 testimonial_section:
   subtitle: Reviews

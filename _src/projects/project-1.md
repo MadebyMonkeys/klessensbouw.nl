@@ -7,26 +7,16 @@ tags:
  - Schilderwerk
 
 images:
-    - url: "/images/projects/project-1/zolder-1.webp"
-      alt: ""
-    - url: "/images/projects/project-1/zolder-2.webp"
-      alt: ""
-    - url: "/images/projects/project-1/zolder-3.webp"
-      alt: ""
-    - url: "/images/projects/project-1/zolder-4.webp"
-      alt: ""
-    - url: "/images/projects/project-1/zolder-5.webp"
-      alt: ""
-    - url: "/images/projects/project-1/zolder-6.webp"
-      alt: ""
-    - url: "/images/projects/project-1/zolder-7.webp"
-      alt: ""
-    - url: "/images/projects/project-1/zolder-8.webp"
-      alt: ""
-    - url: "/images/projects/project-1/zolder-9.webp"
-      alt: ""
-    - url: "/images/projects/project-1/zolder-10.webp"
-      alt: ""
+    - "/images/projects/project-1/zolder-1.webp"
+    - "/images/projects/project-1/zolder-2.webp"
+    - "/images/projects/project-1/zolder-3.webp"
+    - "/images/projects/project-1/zolder-4.webp"
+    - "/images/projects/project-1/zolder-5.webp"
+    - "/images/projects/project-1/zolder-6.webp"
+    - "/images/projects/project-1/zolder-7.webp"
+    - "/images/projects/project-1/zolder-8.webp"
+    - "/images/projects/project-1/zolder-9.webp"
+    - "/images/projects/project-1/zolder-10.webp"
 ---
 
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio quisquam

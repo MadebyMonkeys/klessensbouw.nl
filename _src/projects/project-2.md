@@ -7,14 +7,10 @@ tags:
  - Schilderwerk
 
 images:
-    - url: "/images/projects/project-2/image-1.webp"
-      alt: ""
-    - url: "/images/projects/project-2/image-2.webp"
-      alt: ""
-    - url: "/images/projects/project-2/image-3.webp"
-      alt: ""
-    - url: "/images/projects/project-2/image-4.webp"
-      alt: ""
+    - "/images/projects/project-2/image-1.webp"
+    - "/images/projects/project-2/image-2.webp"
+    - "/images/projects/project-2/image-3.webp"
+    - "/images/projects/project-2/image-4.webp"
 ---
 
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio quisquam

@@ -12,8 +12,8 @@ hasLightbox: true
 <section class="">
     <div class="gallery grid-auto-fit" data-cols="three" data-rows="masonry">
         {{ for image of images }}
-            <a data-fslightbox="gallery" class="gallery__item" href="{{ image.url }}">
-                <img class="image--rounded" src="{{ image.url }}" alt="{{ image.alt }}">
+            <a data-fslightbox="gallery" class="gallery__item" href="{{ image }}">
+                <img class="image--rounded" src="{{ image }}" alt="Project foto">
             </a>
         {{ /for }}
     </div>

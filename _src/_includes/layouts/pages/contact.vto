@@ -1,32 +1,12 @@
 ---
 layout: layouts/page.vto
-
-title: Contact
-description: Some contact description
-
-metas:
-  title: =title
-  description: =description
-
-menu:
-  visible: true
-  title: Contact
-  url: "/contact"
-  order: 5
-
-contact_section:
-  subtitle: Contact
-  title: Kom in contact
-  body: "Mocht u verder nog vragen hebben stel deze dan gerust! Wij zullen deze zo spoedig mogelijk beantwoorden."
-
 ---
-
 <section class="[ contact ] [] [ region ]">
     <div class="grid-auto-fit" data-cols="two">
         <div class="content flow">
             <span class="block--subtitle">{{ contact_section.subtitle }}</span>
             <h2 class="block--title">{{ contact_section.title }}</h2>
-            <p>{{ contact_section.body }}</p>
+            <p>{{ content }}</p>
             <ul class="company-info flow" role="list">
                 <li class="flex-group ai--center"><ion-icon name="pin"></ion-icon> {{ company.address.street }} <br> {{ company.address.zipcode }} {{ company.address.city }}</li>
                 <li class="flex-group ai--center"><ion-icon name="call"></ion-icon> <a href="tel:{{ company.contact.phone }}">{{ company.contact.phone }}</a></li>
@@ -41,7 +21,7 @@ contact_section:
                 </li>
             </ul>
         </div>
-        <form action="https://formsubmit.co/kleske@live.nl" method="POST" name="contact" class="[ flow ]">
+        <form action="https://formsubmit.co/{{ company.contact.email }}" method="POST" name="contact" class="[ flow ]">
             <div class="field-group">
                 <label for="naam">Naam</label>
                 <input type="text" id="naam" name="naam" />

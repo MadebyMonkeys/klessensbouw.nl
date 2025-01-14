@@ -3,8 +3,8 @@ layout: layouts/page.vto
 ---
 
 <section class="[ services ] [] [ region flow ]">
-    <span class="block--subtitle">{{ section_services.subtitle }}</span>
-    <h2 class="block--title">{{ section_services.title }}</h2>
+    <span class="block--subtitle">{{ services_section.subtitle }}</span>
+    <h2 class="block--title">{{ services_section.title }}</h2>
     <div class="grid-auto-fit" data-cols="three">
         {{ set services = search.pages("type=service", "order=desc").slice(0, 3) }}
         {{ for service of services }}
@@ -20,12 +20,12 @@ layout: layouts/page.vto
 <section class="[ werkwijzen ] [ full-width ] [ region bgcolor-neutral-50 ]">
     <div class="grid-auto-fit" data-cols="two">
         <div class="flow">
-            <span class="block--subtitle">{{ section_two.subtitle }}</span>
-            <h2 class="block--title">{{ section_two.title }}</h2>
+            <span class="block--subtitle">{{ two_section.subtitle }}</span>
+            <h2 class="block--title">{{ two_section.title }}</h2>
             {{ content }}
         </div>
         <div>
-            <img class="image--rounded" src="{{ section_two.image.url }}" alt="{{ section_two.image.alt }}">
+            <img class="image--rounded" src="{{ two_section.image }}" alt="Random Image">
         </div>
     </div>
 </section>

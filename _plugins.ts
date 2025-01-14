@@ -6,6 +6,7 @@ import sass from "lume/plugins/sass.ts";
 import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import svgo from "lume/plugins/svgo.ts";
 import transform_images from "lume/plugins/transform_images.ts";
+import decapCMS from "lume/plugins/decap_cms.ts";
 
 export default function () {
   return (site: Site) => {
@@ -31,6 +32,7 @@ export default function () {
       .use(slugifyUrls({
         extensions: "*",
         lowercase: true,
-      }));
+      }))
+      .use(decapCMS());
   };
 }

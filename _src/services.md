@@ -12,16 +12,14 @@ menu:
   url: "/services"
   order: 3
 
-section_services:
+services_section:
   subtitle: "Diensten"
   title: "Diensten waarmee wij u kunnen helpen"
 
-section_two:
+two_section:
   subtitle: "Werkwijzen"
   title: "Zo gaan wij te werk"
-  image:
-    url: "/images/kbt-diensten.webp"
-    alt: "Diensten foto"
+  image: "/images/kbt-diensten.webp"
 ---
 
 Na het eerste contact plannen wij een afspraak en bezoeken we de locatie van het
