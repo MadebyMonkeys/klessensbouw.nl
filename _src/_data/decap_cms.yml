@@ -1,5 +1,5 @@
 # when using the default proxy server port
-local_backend: true
+# local_backend: true
 
 backend:
   name: git-gateway
@@ -241,6 +241,7 @@ collections:
 
   - name: "projects"
     label: "Projecten"
+    label_singular: "Project"
     folder: "_src/projects"
     media_folder: "_src/images/projects" # Where uploaded images are stored in the repo
     public_folder: "/images/projects" # URL path to access the images
@@ -255,6 +256,7 @@ collections:
 
   - name: "services"
     label: "Diensten"
+    label_singular: "Dienst"
     folder: "_src/services"
     create: true
     editor:
@@ -265,4 +267,3 @@ collections:
       - { name: "icon", label: "Icon", widget: "image" }
       - { name: "image", label: "Image", widget: "image" }
       - { name: "body", label: "body", widget: "text" }
-      #- { name: "", label: "", widget: "" }
