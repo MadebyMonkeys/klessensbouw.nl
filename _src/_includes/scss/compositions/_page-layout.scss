@@ -8,42 +8,72 @@
 
 .page-layout,
 .full-width {
-    --_page-layout-gap: var(--page-layout-gap, #{$page-layout-gap});
+  --_page-layout-gap: var(--page-layout-gap, #{$page-layout-gap});
 
-    --_page-layout-full-max-width: var(--page-layout-full-max-width, 1fr);
-    --_page-layout-popout-max-width: var(--page-layout-popout-max-width, #{$page-layout-popout-width});
-    --_page-layout-content-max-width: var(--page-layout-content-max-width, #{$page-layout-content-width});
-    --_page-layout-narrow-max-width: var(--page-layout-narrow-max-width, #{$page-layout-narrow-width});
+  --_page-layout-full-max-width: var(--page-layout-full-max-width, 1fr);
+  --_page-layout-popout-max-width: var(
+    --page-layout-popout-max-width,
+    #{$page-layout-popout-width}
+  );
+  --_page-layout-content-max-width: var(
+    --page-layout-content-max-width,
+    #{$page-layout-content-width}
+  );
+  --_page-layout-narrow-max-width: var(
+    --page-layout-narrow-max-width,
+    #{$page-layout-narrow-width}
+  );
 
-    --page-layout-full: minmax(var(--_page-layout-gap), 1fr);
-    --page-layout-popout: minmax(0, calc((var(--_page-layout-popout-max-width) - var(--_page-layout-content-max-width)) * 0.5));
-    --page-layout-content: minmax(0, calc((var(--_page-layout-content-max-width) - var(--_page-layout-narrow-max-width)) * 0.5));
-    --page-layout-narrow: min( var(--_page-layout-narrow-max-width), 100% - (var(--_page-layout-gap) * 2) );
+  --page-layout-full: minmax(var(--_page-layout-gap), 1fr);
+  --page-layout-popout: minmax(
+    0,
+    calc(
+      (
+        var(--_page-layout-popout-max-width)
+          - var(--_page-layout-content-max-width)
+      )
+        * 0.5
+    )
+  );
+  --page-layout-content: minmax(
+    0,
+    calc(
+      (
+        var(--_page-layout-content-max-width)
+          - var(--_page-layout-narrow-max-width)
+      )
+        * 0.5
+    )
+  );
+  --page-layout-narrow: min(
+    var(--_page-layout-narrow-max-width),
+    100% - var(--_page-layout-gap) * 2
+  );
 
-    display: grid;
-    grid-template-columns:
-        [full-start] var(--page-layout-full)
-        [popout-start] var(--page-layout-popout)
-        [content-start] var(--page-layout-content)
-        [narrow-start] var(--page-layout-narrow) [narrow-end]
-        var(--page-layout-content) [content-end]
-        var(--page-layout-popout) [popout-end]
-        var(--page-layout-full) [full-end];
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--page-layout-full)
+    [popout-start] var(--page-layout-popout)
+    [content-start] var(--page-layout-content)
+    [narrow-start] var(--page-layout-narrow) [narrow-end]
+    var(--page-layout-content) [content-end]
+    var(--page-layout-popout) [popout-end]
+    var(--page-layout-full) [full-end];
 
-    & > :not(.full-width, .full, .popout, .narrow) {
-        grid-column: content;
-    }
+  & > :not(.full-width, .full, .popout, .narrow) {
+    grid-column: content;
+  }
 }
 
 .narrow {
-    grid-column: narrow;
+  grid-column: narrow;
 }
 
 .popout {
-    grid-column: popout;
+  grid-column: popout;
 }
 
 .full,
 .full-width {
-    grid-column: full;
+  grid-column: full;
 }

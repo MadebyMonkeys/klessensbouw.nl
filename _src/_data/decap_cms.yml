@@ -20,38 +20,41 @@ collections:
         file: "_src/_data/site.yml"
         fields:
           - { name: "name", label: "Naam", widget: "string" }
-          - { name: "description", label: "Beschrijving", widget: "text" }
+
+          - name: "metas"
+            label: "metas"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "string" }
+              - { name: "icon", label: "Icon", widget: "image" }
+              - { name: "lang", label: "Language", widget: "string" }
+              - { name: "generator", label: "Generator", widget: "boolean" }
+
           - name: analytics
             label: "Analytics"
             widget: "object"
             fields:
               - {
-                  name: "google_id",
-                  label: "Google analytics ID",
-                  widget: "string",
-                }
-              - {
                   name: "umami_id",
-                  label: "Umami analytics ID",
+                  label: "Umami analytics key",
                   widget: "string",
                 }
 
       - name: "company"
         label: "Company Settings"
         file: "_src/_data/company.yml"
-        editor:
-          preview: false
         fields:
           - { name: "name", label: "Naam", widget: "string" }
           - { name: "logo", label: "Logo", widget: "image" }
           - { name: "kvk", label: "Kvk nummer", widget: "string" }
 
-          - name: "contact"
-            label: "Contact"
+          - name: contact
+            label: "Contact gegevens"
             widget: "object"
             fields:
+              - { name: "phone", label: "Telefoon", widget: "string" }
               - { name: "email", label: "Email", widget: "string" }
-              - { name: "phone", label: "Telefoon nummer", widget: "string" }
 
           - name: "address"
             label: "Adress"
@@ -239,6 +242,22 @@ collections:
 
           - { name: "body", label: "Body", widget: "markdown" }
 
+      - name: "algemene-voorwaarden"
+        label: "Algemene voorwaarden"
+        file: "_src/algemene-voorwaarden.md"
+        fields:
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "description", label: "Description", widget: "string" }
+
+          - name: "metas"
+            label: "metas"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "string" }
+
+          - { name: "body", label: "Body", widget: "markdown" }
+
   - name: "projects"
     label: "Projecten"
     label_singular: "Project"
@@ -252,7 +271,7 @@ collections:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "description", label: "Description", widget: "text" }
       - { name: "images", label: "Images", widget: "image", multiple: true }
-      - { name: "body", label: "body", widget: "text" }
+      - { name: "body", label: "body", widget: "markdown" }
 
   - name: "services"
     label: "Diensten"
@@ -266,4 +285,4 @@ collections:
       - { name: "description", label: "Description", widget: "text" }
       - { name: "icon", label: "Icon", widget: "image" }
       - { name: "image", label: "Image", widget: "image" }
-      - { name: "body", label: "body", widget: "text" }
+      - { name: "body", label: "body", widget: "markdown" }

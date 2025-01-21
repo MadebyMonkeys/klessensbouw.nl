@@ -2,10 +2,6 @@ root: "https://klessensbouw.nl"
 name: KBT
 description: "Uw partner in klussen"
 
-analytics:
-  google_id: ""
-  umami_id: ""
-
 metas:
   site: =name
   title: =title
@@ -14,3 +10,6 @@ metas:
   twitter: ""
   lang: en
   generator: true
+
+analytics:
+  umami_id: ""

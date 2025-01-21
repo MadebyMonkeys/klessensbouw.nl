@@ -1,37 +1,37 @@
 @use "../abstracts" as *;
 
 label {
-    display: block;
-    font-weight: var(--fw-bold);
+  display: block;
+  font-weight: var(--fw-bold);
 }
 
 .field-description {
-    max-width: unset;
-    margin-top: 0;
-    font-size: var(--fs-300);
+  max-width: unset;
+  margin-top: 0;
+  font-size: var(--fs-300);
 }
 
 input,
 select,
 textarea {
-    appearance: none;
-    background: white;
-    margin-top: .75em;
-    width: 100%;
-    max-width: 100%;
-    padding: var(--space-xs) var(--space-s);
-    border: 1px solid var(--neutral-250);
-    border-radius: var(--space-3xs);
+  appearance: none;
+  background: white;
+  margin-top: 0.75em;
+  width: 100%;
+  max-width: 100%;
+  padding: var(--space-s);
+  border: 1px solid var(--neutral-250);
+  border-radius: var(--space-3xs);
 
-    &::placeholder {
-        color: var(--neutral-200);
-    }
+  &::placeholder {
+    color: var(--neutral-200);
+  }
 }
 
 select {
-    --select-icon: #{$input-select-icon};
-    background-image: var(--select-icon);
-    background-position: center right .75rem;
-    background-size: 1rem auto;
-    background-repeat: no-repeat;
+  --select-icon: #{$input-select-icon};
+  background-image: var(--select-icon);
+  background-position: center right 0.75rem;
+  background-size: 1rem auto;
+  background-repeat: no-repeat;
 }
