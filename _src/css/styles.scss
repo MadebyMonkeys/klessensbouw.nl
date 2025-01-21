@@ -147,13 +147,30 @@ h3, .h3 {
 }
 
 .service {
+
   &--card {
     display: flex;
     flex-direction: column;
     padding: var(--space-m);
+    background: linear-gradient(
+      white,
+      white 50%,
+      var(--accent-100) 50%,
+      var(--accent-150)
+    );
+    background-size: 100% 200%;
+    transition: background 600ms;
 
     .icon {
       height: 6ex;
+    }
+
+    &:is(:hover, :focus-visible) {
+      background-position: 100% 100%;
+
+      .icon path {
+        fill: var(--neutral-950);
+      }
     }
   }
 }
