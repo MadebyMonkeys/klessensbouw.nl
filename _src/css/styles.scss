@@ -163,9 +163,14 @@ h3, .h3 {
 
     .icon {
       height: 6ex;
+
+      path {
+        transition: fill 300ms ease-in-out;
+      }
     }
 
     &:is(:hover, :focus-visible) {
+      color: #000;
       background-position: 100% 100%;
 
       .icon path {

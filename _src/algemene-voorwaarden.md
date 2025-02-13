@@ -1,5 +1,6 @@
 ---
 layout: layouts/pages/algemene-voorwaarden.vto
+templateEngine: [vto,md]
 
 title: Algemene Voorwaarden
 description: "Algemene voorwaarden voor KBT"

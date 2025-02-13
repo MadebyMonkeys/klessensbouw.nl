@@ -12,10 +12,14 @@ layout: layouts/page.vto
             <div class="featured_image">
                 <img src="{{ project.cover }}" alt="project image">
             </div>
-            <div class="card__content flow">
-                <h3 class="mt-0">{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-                <a href="{{ project.url }}" class="button">Bekijk project</a>
+            <div class="card__content flow flex-group">
+                <div>
+                    <h3 class="mt-0">{{ project.title }}</h3>
+                    <p>{{ project.description }}</p>
+                </div>
+                <div>
+                    <a href="{{ project.url }}" class="button"><ion-icon name="search-outline"></ion-icon></a>
+                </div>
             </div>
         </div>
         {{ /for }}

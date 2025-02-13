@@ -59,11 +59,18 @@
   border-style: var(--_button-border-style);
   border-color: var(--_button-border-color);
   border-radius: var(--_button-border-radius);
-  max-width: fit-content;
+  max-width: max-content;
   text-decoration: none;
   text-transform: var(--_button-text-transform);
   letter-spacing: var(--_button-letter-spacing);
   transition: all 300ms ease-in-out;
+
+  ionicon,
+  svg {
+    height: var(--button-icon-size, 1.2cap);
+    width: auto;
+    flex: none;
+  }
 
   &:is(:hover) {
     color: var(--_button-foreground-hover);
