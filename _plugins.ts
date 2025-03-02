@@ -31,12 +31,7 @@ export default function () {
       .use(robots())
       .use(sass())
       .use(svgo())
-      .use(transformImages({
-        extensions: [".png", ".jpg"], // Zet PNG en JPG om
-        format: "webp", // WebP is de output
-        quality: 80, // Stel de WebP kwaliteit in
-        cache: true, // Zorgt dat Lume niet steeds opnieuw converteert
-      }))
+      .use(transformImages())
       .use(decapCMS())
       .copy("js")
       .copy("static", ".");
