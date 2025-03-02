@@ -262,14 +262,22 @@ collections:
     label: "Projecten"
     label_singular: "Project"
     folder: "_src/projects"
-    media_folder: "_src/images/projects" # Where uploaded images are stored in the repo
-    public_folder: "/images/projects" # URL path to access the images
+    media_folder: "/_src/images/projects/{{slug}}" # Where uploaded images are stored in the repo
+    public_folder: "/images/projects/{{slug}}" # URL path to access the images
+    slug: "{{slug}}" # Genereert de bestandsnaam vanuit de titel
+    identifier_field: "title" # Gebruikt de titel als unieke identificatie
     create: true
     editor:
       preview: false
     fields:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "description", label: "Description", widget: "text" }
+      - name: "tags"
+        label: "Tags"
+        widget: "list"
+        allow_add: true
+        fields:
+          - { name: "tag", label: "Tag", widget: "string" }
       - { name: "images", label: "Images", widget: "image", multiple: true }
       - { name: "body", label: "body", widget: "markdown" }
 
