@@ -2,10 +2,10 @@ import date from "lume/plugins/date.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import inline from "lume/plugins/inline.ts";
 import metas from "lume/plugins/metas.ts";
+import robots from "lume/plugins/robots.ts";
 import sass from "lume/plugins/sass.ts";
-import slugifyUrls from "lume/plugins/slugify_urls.ts";
 import svgo from "lume/plugins/svgo.ts";
-import transform_images from "lume/plugins/transform_images.ts";
+import transformImages from "lume/plugins/transform_images.ts";
 import decapCMS from "lume/plugins/decap_cms.ts";
 
 export default function () {
@@ -28,20 +28,16 @@ export default function () {
       .use(esbuild({ target: "es6" }))
       .use(inline())
       .use(metas())
+      .use(robots())
       .use(sass())
       .use(svgo())
-      .use(transform_images({
-        extensions: [".png", ".jpg", "jpeg"],
-        format: "webp",
-        quality: 80,
-        cache: true,
-      }))
-      .use(slugifyUrls({
-        extensions: "*",
-        lowercase: true,
+      .use(transformImages({
+        extensions: [".png", ".jpg"], // Zet PNG en JPG om
+        format: "webp", // WebP is de output
+        quality: 80, // Stel de WebP kwaliteit in
+        cache: true, // Zorgt dat Lume niet steeds opnieuw converteert
       }))
       .use(decapCMS())
-      
       .copy("js")
       .copy("static", ".");
   };
