@@ -8,7 +8,7 @@ layout: layouts/page.vto
             {{- content -}}
         </div>
         <div>
-            <img src="{{ image }}" alt="{{ title }} foto">
+            <img src="{{ image |> toWebp }}" alt="{{ title }} foto">
         </div>
     </div>
 </section>

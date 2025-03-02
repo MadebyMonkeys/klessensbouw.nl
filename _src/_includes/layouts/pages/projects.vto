@@ -10,7 +10,7 @@ layout: layouts/page.vto
         {{ for project of projects }}
         <div class="card project--card">
             <div class="featured_image">
-                <img src="{{ project.cover }}" alt="project image">
+                <img src="{{ project.cover |> toWebp }}" alt="project image">
             </div>
             <div class="card__content flow flex-group">
                 <div>

@@ -37,7 +37,7 @@ layout: layouts/page.vto
     {{ for project of projects }}
       <div class="card project--card">
         <div class="featured_image">
-          <img src="{{ project.cover }}" alt="project image">
+          <img src="{{ project.cover |> toWebp }}" alt="project image">
         </div>
         <div class="card__content flow flex-group ai--center">
             <h3 class="mt-0">{{ project.title }}</h3>
@@ -56,7 +56,7 @@ layout: layouts/page.vto
       <a href="{{ about_section.button.url }}" class="button">{{ about_section.button.title }}</a>
     </div>
     <div>
-      <img class="image--rounded" src="{{ about_section.image.url }}" alt="{{ about_section.image.alt }}">
+      <img class="image--rounded" src="{{ about_section.image.url |> toWebp }}" alt="{{ about_section.image.alt }}">
     </div>
   </div>
 </section>
