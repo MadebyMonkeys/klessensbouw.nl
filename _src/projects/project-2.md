@@ -1,16 +1,16 @@
 ---
 title: "Project 2"
 description: "Korte project beschrijving"
-cover: "/images/projects/project-2/image-1.webp"
+cover: "/images/projects/project2-image-1.webp"
 tags:
  - Timmerwerk
  - Schilderwerk
 
 images:
-    - "/images/projects/project-2/image-1.webp"
-    - "/images/projects/project-2/image-2.webp"
-    - "/images/projects/project-2/image-3.webp"
-    - "/images/projects/project-2/image-4.webp"
+    - "/images/projects/project2-image-1.webp"
+    - "/images/projects/project2-image-2.webp"
+    - "/images/projects/project2-image-3.webp"
+    - "/images/projects/project2-image-4.webp"
 ---
 
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum odio quisquam

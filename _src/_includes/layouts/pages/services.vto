@@ -25,7 +25,7 @@ layout: layouts/page.vto
             {{ content }}
         </div>
         <div>
-            <img class="image--rounded" src="{{ two_section.image }}" alt="Random Image">
+            <img class="image--rounded" src="{{ two_section.image |> toWebp }}" alt="Random Image">
         </div>
     </div>
 </section>
