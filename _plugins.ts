@@ -31,9 +31,10 @@ export default function () {
       .use(sass())
       .use(svgo())
       .use(transform_images({
-        extensions: [".png", ".jpg"], // Zet PNG en JPG om
-        format: "webp", // WebP is de output
-        quality: 80, // Stel de WebP kwaliteit in
+        extensions: [".png", ".jpg", "jpeg"],
+        format: "webp",
+        quality: 80,
+        cache: true,
       }))
       .use(slugifyUrls({
         extensions: "*",
