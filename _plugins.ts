@@ -11,8 +11,6 @@ import decapCMS from "lume/plugins/decap_cms.ts";
 export default function () {
   return (site: Site) => {
     site
-      .copy("js")
-      .copy("static", ".")
       .filter(
         "getRelatedPosts",
         (postsList, tags) =>
@@ -22,6 +20,10 @@ export default function () {
             }
           }),
       )
+      .filter("toWebp", (value) => {
+        if (!value || typeof value !== "string") return value; // Als het geen string is, geef de originele waarde terug
+        return value.replace(/\.(jpg|jpeg|png)$/i, ".webp");
+      })
       .use(date())
       .use(esbuild({ target: "es6" }))
       .use(inline())
@@ -33,6 +35,9 @@ export default function () {
         extensions: "*",
         lowercase: true,
       }))
-      .use(decapCMS());
+      .use(decapCMS())
+      
+      .copy("js")
+      .copy("static", ".");
   };
 }
