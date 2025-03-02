@@ -30,7 +30,11 @@ export default function () {
       .use(metas())
       .use(sass())
       .use(svgo())
-      .use(transform_images())
+      .use(transform_images({
+        extensions: [".png", ".jpg"], // Zet PNG en JPG om
+        format: "webp", // WebP is de output
+        quality: 80, // Stel de WebP kwaliteit in
+      }))
       .use(slugifyUrls({
         extensions: "*",
         lowercase: true,
