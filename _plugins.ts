@@ -31,7 +31,13 @@ export default function () {
       .use(robots())
       .use(sass())
       .use(svgo())
-      .use(transformImages())
+      .use(transformImages({
+        path: "/images/",
+        extensions: [".png", ".jpg"],
+        format: "webp",
+        quality: 80,
+        cache: true,
+      }))
       .use(decapCMS())
       .copy("js")
       .copy("static", ".");
