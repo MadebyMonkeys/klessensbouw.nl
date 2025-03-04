@@ -28,7 +28,6 @@ export default function () {
         /** 🔹 Plugins */
         site
             .use(date())
-            //.use(decap_cms())
             .use(favicon({
                 input: "/static/favicon/android-icon-48x48.png",
             }))
@@ -43,7 +42,8 @@ export default function () {
                 extensions: [".jpg", ".jpeg", ".png"],
                 format: "webp",
                 quality: 80,
-            }));
+            }))
+            .use(decap_cms());
 
         /** 🔹 Bestanden kopiëren */
         site
