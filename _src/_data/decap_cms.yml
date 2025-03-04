@@ -129,7 +129,7 @@ collections:
                   - { name: "url", label: "url", widget: "string" }
                   - { name: "alt", label: "Title", widget: "string" }
 
-          - name: "section_testimonial"
+          - name: "section_testimonials"
             label: "Reviews"
             widget: "object"
             fields:
@@ -160,7 +160,7 @@ collections:
 
           - { name: "body", label: "Body", widget: "markdown" }
 
-          - name: "section_testimonial"
+          - name: "section_testimonials"
             label: "Review"
             widget: "object"
             fields:
@@ -283,8 +283,7 @@ collections:
     fields:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "description", label: "Description", widget: "text" }
-      - { name: "image", label: "Image", widget: "image" }
-      - { name: "body", label: "body", widget: "text" }
+      - { name: "body", label: "body", widget: "rich-text" }
 
 
   - name: "testimonials"
