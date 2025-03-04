@@ -2,6 +2,11 @@
 layout: layouts/pages/offerte.vto
 
 title: Offerte aanvragen
+description: "Vraag vrijblijvend een offerte aan"
+
+metas:
+  title: =title
+  description: =description
 
 menu:
   visible: true

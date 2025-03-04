@@ -4,6 +4,10 @@ layout: layouts/pages/projects/list.vto
 title: Projecten
 description: "Projecten welke ik heb mogen doen"
 
+metas:
+  title: =title
+  description: =description
+
 menu:
   visible: true
   title: "Projecten"

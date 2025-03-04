@@ -10,6 +10,10 @@ menu:
 title: Over mij
 description: "we bouwen voor u en uw wensen. We staan klaar voor u op het gebied van aan/verbouw, renovatie, sloopwerk, klussen en stucwerk."
 
+metas:
+  title: =title
+  description: =description
+
 section_hero:
   block_title:
   title:

@@ -4,6 +4,10 @@ layout: layouts/pages/contact.vto
 title: "Contact"
 description: "Kom in contact"
 
+metas:
+  title: =title
+  description: =description
+
 menu:
   visible: true
   title: "Contact"

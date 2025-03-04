@@ -4,6 +4,10 @@ layout: layouts/pages/services/list.vto
 title: Diensten
 description: "pagina beschrijving"
 
+metas:
+  title: =title
+  description: =description
+
 menu:
   visible: true
   title: "Diensten"

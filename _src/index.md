@@ -6,6 +6,10 @@ hasCarousel: true
 title: "Homepage"
 description: "Klessens bouw voor al uw klussen"
 
+metas:
+  title: =title
+  description: =description
+
 menu:
   visible: true
   title: Home
