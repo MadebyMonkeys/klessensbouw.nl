@@ -206,8 +206,6 @@ collections:
               - { name: "block_title", label: "Block title", widget: "string" }
               - { name: "title", label: "Title", widget: "string" }
 
-          - { name: "body", label: "Body", widget: "markdown" }
-
       - name: "contact"
         label: "Contact"
         file: "_src/contact.md"
