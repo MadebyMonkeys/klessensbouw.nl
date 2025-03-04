@@ -1,20 +1,20 @@
-<footer class="[ site-footer ] [ full-width ] [ region ]">
-    <div class="flex-group jc--between">
-        <p class="mt-0">&copy; Copyright 2024 by <a href="/">{{ company.name }}</a> &ndash; kvk {{ company.kvk }}</p>
-        <div class="">
-            <a href="/algemene-voorwaarden">Algemene Voorwaarden</a>
-        </div>
+<footer class="[ site-footer ] [ popout ] [ region ]">
+    <div class="site-footer__inner">
+        <small>&copy; Copyright 2025 by {{ company.name }} &ndash; kvk {{ company.kvk_nummer }}</small>
+        <ul class="sitemap" role="list">
+            <li><a href="/algemene-voorwaarden">Algemene Voorwaarden</a></li>
+        </ul>
     </div>
 </footer>
 
-<script src="/js/main.js"></script>
+<script defer src="/js/main.js"></script>
 
-{{ if hasCarousel == true }}
-    <script src="/js/carousel.js"></script>
+{{ if hasCarousel }}
+    <script defer src="/js/carousel.js"></script>
 {{ /if }}
 
-{{ if hasLightbox == true }}
-    <script src="/js/fslightbox.js"></script>
+{{ if hasLightbox }}
+    <script defer src="/js/fslightbox.js"></script>
 {{ /if }}
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

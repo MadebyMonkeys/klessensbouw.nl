@@ -1,0 +1,99 @@
+@use "../abstracts" as *;
+
+// -----------------------------------------------------------------------------
+// Core instellingen (zonder kleuren)
+// -----------------------------------------------------------------------------
+
+.button {
+    --_button-border-width: var(--button-border-width, #{$button-border-width});
+    --_button-border-style: var(--button-border-style, #{$button-border-style});
+    --_button-border-radius: var(--button-border-radius, #{$button-border-radius});
+    --_button-font-size: var(--button-font-size, #{$button-font-size});
+    --_button-font-weight: var(--button-font-weight, #{$button-font-weight});
+    --_button-padding: var(--button-padding, #{$button-padding});
+    --_button-gap: var(--button-gap, #{$button-gap});
+    --_button-line-height: var(--button-line-height, #{$button-line-height});
+    --_button-box-shadow-hover: var(--button-box-shadow-hover, #{$button-box-shadow-hover});
+
+    display: inline-flex;
+    align-items: center;
+    gap: var(--_button-gap);
+    padding: var(--_button-padding);
+
+    font-size: var(--_button-font-size);
+    font-weight: var(--_button-font-weight);
+    letter-spacing: 0.05ch;
+    line-height: var(--_button-line-height);
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border-width: var(--_button-border-width);
+    border-style: var(--_button-border-style);
+    border-radius: var(--_button-border-radius);
+
+    &:focus {
+        outline-width: var(--button-outline-width, var(--_button-border-width));
+        outline-style: var(--button-outline-style, var(--_button-border-style));
+        outline-color: var(--button-outline-color, var(--button-border-color));
+        outline-offset: var(--button-outline-offset, calc(var(--_button-border-width) * 2));
+    }
+}
+
+// -----------------------------------------------------------------------------
+// Kleuren en Varianten
+// -----------------------------------------------------------------------------
+
+.button {
+    --_button-foreground: var(--button-foreground, #{$button-foreground});
+    --_button-background: var(--button-background, #{$button-background});
+    --_button-foreground-hover: var(--button-foreground-hover, #{$button-foreground-hover});
+    --_button-background-hover: var(--button-background-hover, #{$button-background-hover});
+    --_button-border-color: var(--button-border-color, var(--_button-background));
+
+    background: var(--_button-background);
+    color: var(--_button-foreground);
+    border-color: var(--_button-border-color, currentColor);
+
+    &:hover {
+        --button-background: var(--_button-background-hover);
+        --button-foreground: var(--_button-hover-foreground);
+        --button-border-color: var(--_button-background-hover);
+    }
+
+    &[data-button-variant="accent"] {
+        --button-foreground:  #{$button-accent-foreground};
+        --button-background: #{$button-accent-background};
+        --button-foreground-hover: #{$button-accent-foreground-hover};
+        --button-background-hover: #{$button-accent-background-hover};
+        --button-border-color: var(--button-background);
+
+        &:hover {
+            --button-background: var(--_button-background-hover);
+            --button-foreground: var(--_button-hover-foreground);
+            --button-border-color: var(--_button-background-hover);
+        }
+    }
+
+    &[data-button-ghost] {
+        --button-foreground: var(--_button-background, currentColor);
+        --button-background-hover: #{$button-background-hover};
+        --button-border-color: var(--button-foreground, currentColor);
+
+        background: transparent;
+
+        &:hover {
+            background: var(--button-background-hover);
+            --button-foreground: var(--_button-foreground-hover);
+            --button-border-color: var(--_button-background-hover);
+        }
+    }
+
+    &[data-button-radius="hard"] {
+        --_button-border-radius: 0;
+    }
+
+    &.shadow:hover {
+        box-shadow: var(--_button-box-shadow-hover);
+    }
+}

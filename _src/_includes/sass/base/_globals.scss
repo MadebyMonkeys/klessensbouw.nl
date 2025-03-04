@@ -1,0 +1,90 @@
+@use "../abstracts/" as *;
+
+
+// -----------------------------------------------------------------------------
+// BODY
+// -----------------------------------------------------------------------------
+
+body {
+    --_body-foreground: var(--body-foreground, #{$body-foreground});
+    --_body-background: var(--body-background, #{$body-background});
+
+    --_body-font-family: var(--body-font-family, #{$body-font-family});
+    --_body-font-size: var(--body-font-size, #{$body-font-size});
+    --_body-font-weight: var(--body-font-weight, #{$body-font-weight});
+    --_body-line-height: var(--body-line-height, #{$body-line-height});
+
+    color: var(--_body-foreground);
+    background: var(--_body-background);
+
+    font-family: var(--_body-font-family);
+    font-size: var(--_body-font-size);
+    font-weight: var(--_body-font-weight);
+    line-height: var(--_body-line-height);
+}
+
+
+
+// -----------------------------------------------------------------------------
+// HEADING
+// -----------------------------------------------------------------------------
+
+h1, h2, h3 {
+    --_heading-foreground: var(--heading-foreground, #{$heading-foreground});
+    --_heading-font-family: var(--heading-font-family, #{$heading-font-family});
+    --_heading-font-size: var(--heading-font-size, #{$heading-font-size});
+    --_heading-font-weight: var(--heading-font-weight, #{$heading-font-weight});
+    --_heading-line-height: var(--heading-line-height, #{$heading-line-height});
+
+    color: var(--_heading-foreground);
+    font-family: var(--_heading-font-family);
+    font-size: var(--_heading-font-size);
+    font-weight: var(--_heading-font-weight);
+    line-height: var(--_heading-line-height);
+}
+
+
+
+// -----------------------------------------------------------------------------
+// ANCHOR
+// -----------------------------------------------------------------------------
+
+a {
+    --_link-foreground: var(--link-foreground, #{$link-foreground});
+    --_link-text-decoration: var(--link-text-decoration, #{$link-text-decoration});
+
+    &:not([class]) {
+        color: var(--_link-foreground);
+        text-decoration: var(--_link-text-decoration);
+        transition: all 300ms ease-in-out;
+
+        &:is(:hover :focus-visible) {
+            --link-foreground: #{$link-foreground-hover};
+        }
+    }
+}
+
+
+
+// -----------------------------------------------------------------------------
+// INPUTS
+// -----------------------------------------------------------------------------
+
+input,
+select,
+textarea {
+    appearance: none;
+    max-width: 100%;
+    min-width: 100%;
+    padding: var(--space-2xs);
+    border: 1px solid var(--neutral-400);
+    border-radius: 3px;
+}
+
+select {
+    --select-icon: #{$input-select-icon};
+    background-image: var(--select-icon);
+    background-position: center right 0.75rem;
+    background-size: 1rem auto;
+    background-repeat: no-repeat;
+}

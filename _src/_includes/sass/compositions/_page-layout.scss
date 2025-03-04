@@ -1,0 +1,89 @@
+@use "../abstracts" as *;
+
+// -----------------------------------------------------------------------------
+// Page layout
+// -----------------------------------------------------------------------------
+
+.page-layout,
+.full-width {
+    --_min-content-padding: var(--min-padding-inline, #{$page-layout-padding-inline});
+
+    --_full-max-width: var(--full-max-width, 1fr);
+    --_feature-max-width: var(--feature-max-width, #{$page-layout-feature-max-width});
+    --_popout-max-width: var(--popout-max-width, #{$page-layout-popout-max-width});
+    --_content-max-width: var(--content-max-width, #{$page-layout-content-max-width});
+
+    --_track-full: minmax(var(--_min-content-padding), 1fr);
+    --_track-feature: minmax(0, calc((var(--_feature-max-width) - var(--_popout-max-width)) * .5));
+    --_track-popout: minmax(0, calc((var(--_popout-max-width) - var(--_content-max-width)) * .5));
+    --_track-content: min(var(--_content-max-width), 100% - (var(--_min-content-padding) * 2));
+
+    display: grid;
+    grid-template-columns:
+        [full-start] var(--_track-full)
+        [feature-start] var(--_track-feature)
+        [popout-start] var(--_track-popout)
+        [content-start] var(--_track-content) [content-end]
+        var(--_track-popout) [popout-end]
+        var(--_track-feature) [feature-end]
+        var(--_track-full) [full-end];
+
+    
+    & > :not(.full-width, .full, .feature, .popout) {
+        grid-column: content;
+    }
+}
+
+
+.full {
+    grid-column: full;
+
+    &-start { 
+        grid-column-start: full-start;
+    }
+
+    &--end {
+        grid-column-end: full-end;
+    }
+}
+
+.feature {
+    grid-column: feature;
+
+    &-start { 
+        grid-column-start: feature-start;
+    }
+
+    &--end {
+        grid-column-end: feature-end;
+    }
+}
+
+.popout {
+    grid-column: popout;
+
+    &-start { 
+        grid-column-start: popout-start;
+    }
+
+    &--end {
+        grid-column-end: popout-end;
+    }
+}
+
+.content {
+    grid-column: content;
+
+    &-start { 
+        grid-column-start: content-start;
+    }
+
+    &--end {
+        grid-column-end: content-end;
+    }
+}
+
+.full,
+.full-width { 
+    grid-column: full;
+}

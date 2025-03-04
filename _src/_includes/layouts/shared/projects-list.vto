@@ -1,0 +1,11 @@
+{{ for index, project of projects }}
+<a class="card card--project" href="{{ project.url }}">
+    <img class="" src="{{ project.image |> toWebp }}" alt="{{ project.title }}">
+    <div class="flow">
+        <h3 class="">{{ project.title }}</h3>
+        <div class="cluster">
+            {{ project.tags |> join(', ') }}
+        </div>
+    </div>
+</a>
+{{ /for }}

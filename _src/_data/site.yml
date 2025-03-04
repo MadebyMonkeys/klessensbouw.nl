@@ -1,15 +1,13 @@
 root: "https://klessensbouw.nl"
-name: KBT
-description: "Uw partner in klussen"
+name: "Klessens Bouw"
+description: ""
 
 metas:
-  site: =name
   title: =title
   description: =description
-  image: =image
-  twitter: ""
-  lang: en
+  icon: /img/icon.png
+  lang: nl
   generator: true
 
 analytics:
-  umami_id: ""
+  umami_id: "c5c714ff-a5ff-4a4d-91b1-51b50d232e46"

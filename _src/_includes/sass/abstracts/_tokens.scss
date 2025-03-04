@@ -1,0 +1,176 @@
+@use "colors" as *;
+
+// -----------------------------------------------------------------------------
+// THEMING
+// -----------------------------------------------------------------------------
+
+$active-theme: $default;
+$enable-media-prefers-dark-mode: false;
+
+
+$flex-group-gap: var(--space-s-l);
+$grid-gap: var(--space-s-l);
+
+$region-space: 6.6vmax;
+
+$page-max-width: 1280px;
+
+
+$input-select-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+
+
+// -----------------------------------------------------------------------------
+// BODY
+// -----------------------------------------------------------------------------
+
+$body-foreground: var(--neutral-600);
+$body-background: var(--background-color);
+$body-font-family: var(--ff-sans);
+$body-font-size: var(--fs-400);
+$body-font-weight: var(--fw-regular);
+$body-line-height: 1.618;
+
+
+
+// -----------------------------------------------------------------------------
+// HEADING(s)
+// -----------------------------------------------------------------------------
+
+$heading-foreground: var(--neutral-900);
+$heading-font-family: var(--ff-serif);
+$heading-font-size: inherit;
+$heading-font-weight: var(--fw-semibold);
+$heading-line-height: 1.1;
+
+
+
+// -----------------------------------------------------------------------------
+// ANCHOR
+// -----------------------------------------------------------------------------
+
+$link-foreground: var(--neutral-700);
+$link-foreground-hover: var(--primary-400);
+
+$link-text-decoration: none;
+$link-text-decoration-hover: underline;
+
+
+
+// -----------------------------------------------------------------------------
+// SITE-HEADER
+// -----------------------------------------------------------------------------
+
+$site-header-background: transparent;
+$site-header-padding-block: var(--space-s);
+$site-header-align-items: center;
+
+$site-header-justify-content-small-screen: center;
+$site-header-justify-content-large-screen: space-between;
+
+
+
+// -----------------------------------------------------------------------------
+// SITE-NAVIGATION
+// -----------------------------------------------------------------------------
+
+$site-nav-list-gap: var(--space-3xs);
+
+$site-nav-link-foreground: var(--neutral-500);
+$site-nav-link-foreground-hover: var(--neutral-700);
+$site-nav-link-foreground-active: var(--neutral-50);
+
+$site-nav-link-background: transparent;
+$site-nav-link-background-hover: var(--neutral-50);
+$site-nav-link-background-active: var(--neutral-950);
+
+$site-nav-link-font-size: 1rem;
+$site-nav-link-font-weight: inherit;
+$site-nav-link-padding: var(--space-xs) var(--space-s);
+$site-nav-link-line-height: 1.1;
+$site-nav-link-border-radius: var(--space-3xs);
+
+
+
+// -----------------------------------------------------------------------------
+// # HAMBURGER
+// -----------------------------------------------------------------------------
+
+$hamburger-padding: var(--size-2xs);
+
+$hamburger-icon-foreground: var(--neutral-950);
+$hamburger-icon-width: 3ex;
+$hamburger-icon-stroke-width: 7px;
+$hamburger-icon-animation-timing: 600ms;
+
+
+// -----------------------------------------------------------------------------
+// Page layout
+// -----------------------------------------------------------------------------
+
+$page-layout-padding-inline: 5dvw;
+$page-layout-feature-max-width: 1536px;
+$page-layout-popout-max-width: 1280px;
+$page-layout-content-max-width: 1024px;
+
+
+
+// -----------------------------------------------------------------------------
+// WRAPPER
+// -----------------------------------------------------------------------------
+
+$wrapper-padding-inline: $page-layout-padding-inline;
+
+$wrapper-max-width: $page-max-width;
+
+
+
+// This is used for the content from .full-width-split-screen class
+$full-width-split-screen-padding-inline: 5dvw;
+$full-width-split-screen-max-width: $page-max-width;
+$full-width-split-screen-content-padding: clamp(1rem, 6dvw, 8rem);
+
+
+
+// -----------------------------------------------------------------------------
+// Button
+// -----------------------------------------------------------------------------
+
+$button-foreground: var(--neutral-50);
+$button-foreground-hover: var(--neutral-50);
+
+$button-background: var(--neutral-800);
+$button-background-hover: var(--neutral-950);
+
+$button-accent-foreground: var(--neutral-950);
+$button-accent-foreground-hover: $button-foreground-hover;
+
+$button-accent-background: var(--accent-500);
+$button-accent-background-hover: $button-background-hover;
+
+$button-padding: 1rem 1.5rem;
+$button-gap: .5em;
+
+$button-border-width: 2px;
+$button-border-style: solid;
+$button-border-color: var(--_button-background);
+$button-border-radius: .5rem;
+
+$button-font-size: var(--fs-400);
+$button-font-weight: var(--fw-medium);
+$button-line-height: 1;
+
+$button-box-shadow-hover: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+
+
+// -----------------------------------------------------------------------------
+// DROPDOWN
+// -----------------------------------------------------------------------------
+
+$card-background: white;
+$card-foreground: inherit;
+$card-padding: var(--space-m);
+$card-flow: .5rem;
+$card-border-radius: var(--space-3xs);
+$card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);

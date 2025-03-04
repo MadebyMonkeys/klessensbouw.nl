@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+
+// -----------------------------------------------------------------------------
+//
+// -----------------------------------------------------------------------------
+
+.card {
+    --_card-background: var(--card-background, #{$card-background});
+    --_card-foreground: var(--card-foreground, #{$card-foreground});
+    --_card-padding: var(--card-padding, #{$card-padding});
+    --_card-flow: var(--card-flow, #{$card-flow});
+    --_card-border-radius: var(--card-border-radius, #{$card-border-radius});
+    --_card-box-shadow: var(--card-box-shadow, #{$card-shadow});
+
+    color: var(--_card-foreground);
+    background: var(--_card-background);
+    display: grid;
+    gap: var(--_card-flow);
+    padding: var(--_card-padding);
+    border-radius: var(--_card-border-radius);
+    box-shadow: var(--_card-box-shadow);
+}
+
+
+.project--card {
+    --_card-background: var(--card-background, #{$card-background});
+    --_card-foreground: var(--card-foreground, #{$card-foreground});
+    --_card-padding: var(--card-padding, #{$card-padding});
+    --_card-flow: var(--card-flow, #{$card-flow});
+    --_card-border-radius: var(--card-border-radius, #{$card-border-radius});
+    --_card-box-shadow: var(--card-box-shadow, #{$card-shadow});
+
+    color: var(--_card-foreground);
+    background: var(--_card-background);
+    display: grid;
+    gap: var(--_card-flow);
+    border-radius: var(--_card-border-radius);
+    box-shadow: var(--_card-box-shadow);
+
+    &__content {
+        padding: var(--_card-padding);
+    }
+}

@@ -1,0 +1,29 @@
+---
+layout: layouts/shared/default.vto
+---
+
+<section id="projects" class="[ projecten ] [ full-width ] [ region ]">
+  <div class="popout">
+    <div class="block">
+      <span class="block__title">{{ section_projects.block_title }}</span>
+      <h2 class="block__subtitle">{{ section_projects.title }}</h2>
+    </div>
+    <ul class="grid" data-cols="halfs" role="list">
+      {{ set projects = search.pages("type=project", "order=desc") }}
+      {{ for item of projects }}
+      <li>
+        <div class="card card--project">
+            <img src="{{ item.featured }}" alt="">
+            <div class="card__content flow">
+                <h3>{{ item.title }}</h3>
+                <div class="cluster fs-300">
+                {{ item.tags |> join(', ') }}
+                </div>
+                <a href="{{ item.url }}" class="button" data-button-ghost>Bekijk project</a>
+            </div>
+        </div>
+      </li>
+      {{ /for }}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,86 @@
+---
+layout: layouts/shared/default.vto
+---
+
+<section class="[ hero ] [ full ] [ video-section pile ]">
+  {{ if section_hero.video.mp4 }}
+    <video class="video-section__video" autoplay loop muted playsinline>
+      <source src="{{ section_hero.video.mp4 }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  {{ else if section_hero.video.youtube }}
+    <iframe class="video-section__iframe"
+      src="https://www.youtube.com/embed/{{ section_hero.video.youtube }}?autoplay=1&rel=0
+        {{ if section_hero.video.loop }}&loop=1&playlist={{ section_hero.video.youtube }}{{ /if }}
+        {{ if section_hero.video.mute }}&mute=1{{ /if }}
+        {{ if section_hero.video.controls == false }}&controls=0{{ /if }}
+        {{ if section_hero.video.branding == false }}&modestbranding=1{{ /if }}
+        {{ if section_hero.video.start }}&start={{ section_hero.video.start }}{{ /if }}"
+      frameborder="0"
+      allow="autoplay; encrypted-media; fullscreen"
+      allowfullscreen>
+    </iframe>
+  {{ /if }}
+  <div class="video-section__overlay"></div>
+  <div class="video-section__content region flow">
+    <div class="block">
+      <span class="block__title">{{ section_hero.block_title }}</span>
+      <h1 class="block__subtitle">{{ section_hero.title }}</h1>
+    </div>
+    <a href="#projects" class="button circle" data-button-variant="accent" data-button-ghost><ion-icon name="arrow-down-outline"></ion-icon></a>
+  </div>
+</section>
+<section id="projects" class="[ projecten ] [ full-width ] [ region ]">
+  <div class="popout">
+    <div class="block">
+      <span class="block__title">{{ section_projects.block_title }}</span>
+      <h2 class="block__subtitle">{{ section_projects.title }}</h2>
+    </div>
+    <ul class="grid" data-cols="halfs" role="list">
+      {{ set projects = search.pages("type=project", "order=desc") }}
+      {{ for item of projects }}
+      <li>
+        <div class="card card--project">
+          <img src="{{ item.featured }}" alt="">
+          <div class="card__content flow">
+            <h3>{{ item.title }}</h3>
+            <div class="cluster">
+              {{ item.tags |> join(', ') }}
+            </div>
+            <a href="{{ item.url }}" class="button" data-button-ghost>Bekijk project</a>
+          </div>
+        </div>
+      </li>
+      {{ /for }}
+    </ul>
+  </div>
+</section>
+<section class="[ diensten ] [ full-width ] [ region bg-neutral-50 brick-background ]">
+  <div class="block">
+    <span class="block__title">{{ section_service.block_title }}</span>
+            <h2 class="block__subtitle">{{ section_service.title }}</h2>
+  </div>
+  <ul class="grid" data-cols="thirds" role="list">
+    {{ set services = search.pages("type=service") }}
+    {{ for service of services }}
+    <li class="card">
+      <img class="icon" src="{{ service.icon }}" inline />
+      <h3>{{ service.title }}</h3>
+      {{ service.description |> md }}
+      <a href="{{ service.url }}" class="button" data-button-ghost>Meer informatie</a>
+    </li>
+    {{ /for }}
+  </ul>
+</section>
+<section class="[ about about--homepage ] [ full full-width-split-screen ] [ ]">
+  <img src="{{ section_about.image }}" alt="{{ section_about.alt }}">
+  <div class="bg-accent-300 color-neutral-950 flow">
+    <div class="block">
+      <span class="block__title">{{ section_about.block_title }}</span>
+            <h2 class="block__subtitle">{{ section_about.title }}</h2>
+    </div>
+    {{ section_about.body |> md }}
+    <a href="{{ section_about.button.url }}" class="button">{{ section_about.button.title }}</a>
+  </div>
+</section>
+{{ include "partials/blocks/testimonials.vto" }}

@@ -1,48 +1,32 @@
 ---
-layout: layouts/page.vto
+layout: layouts/shared/default.vto
 ---
-<section class="[ contact ] [] [ region ]">
-    <div class="grid-auto-fit" data-cols="two">
-        <div class="content flow">
-            <span class="block--subtitle">{{ contact_section.subtitle }}</span>
-            <h2 class="block--title">{{ contact_section.title }}</h2>
-            <p>{{ content }}</p>
+
+<section class="[ contact ] [ popout ] [ region ]">
+    <div class="grid" data-cols="halfs">
+        <div class="flow">
+            <div class="block">
+                <span class="block__title">contact</span>
+                <h2 class="block__subtitle">Kom in contact</h2>
+            </div>
+            {{- content -}}
+
             <ul class="company-info flow" role="list">
-                <li class="flex-group ai--center"><ion-icon name="pin"></ion-icon> {{ company.address.street }} <br> {{ company.address.zipcode }} {{ company.address.city }}</li>
-                <li class="flex-group ai--center"><ion-icon name="call"></ion-icon> <a href="tel:{{ company.contact.phone }}">{{ company.contact.phone }}</a></li>
-                <li class="flex-group ai--center"><ion-icon name="mail"></ion-icon> {{ company.contact.email }}</li>
-                <li class="socials flow">
-                    <h3>Volg ons</h3>
-                    <div class="social-links">
-                        {{ for social of company.socials }}
-                            <a href="{{ social.url }}" class="link"><ion-icon size="xlarge" name="{{ social.icon }}"></ion-icon></a>
-                        {{ /for }}
-                    </div>
-                </li>
+                <li class="flex-group"><ion-icon name="pin"></ion-icon> {{ company.address.street }} <br> {{ company.address.zipcode }} {{ company.address.city }}</li>
+                <li class="flex-group"><ion-icon name="call"></ion-icon> <a href="tel:{{ company.contact.phone }}">{{ company.contact.phone }}</a></li>
+                <li class="flex-group"><ion-icon name="mail"></ion-icon> {{ company.contact.email }}</li>
             </ul>
+
+            <div class="socials flow">
+                <h3>Onze socials</h3>
+                <div class="social-links">
+                    {{ for social of company.socials }}
+                        <a href="{{ social.url }}" class="social"><ion-icon size="xlarge" name="{{ social.icon }}"></ion-icon></a>
+                    {{ /for }}
+                </div>
+            </div>
         </div>
-        <form action="https://formsubmit.co/{{ company.contact.email }}" method="POST" name="contact" class="[ flow ]">
-            <div class="field-group">
-                <label for="naam">Naam</label>
-                <input type="text" id="naam" name="naam" />
-            </div>
-            
-            <div class="field-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" />
-            </div>
-        
-            <div class="field-group">
-                <label for="onderwerp">Onderwerp</label>
-                <input type="text" id="onderwerp" name="onderwerp" />
-            </div>
-        
-            <div class="field-group">
-                <label for="bericht">Uw bericht</label>
-                <textarea id="bericht" name="bericht" rows="10" class=""></textarea>
-            </div>
-            
-            <button class="button" type="submit">Verzend</button>
-        </form>
+        {{ include "partials/blocks/forms/contact.vto" }}
     </div>
 </section>
+

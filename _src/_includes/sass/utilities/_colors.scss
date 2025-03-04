@@ -1,0 +1,17 @@
+@use "../abstracts" as *;
+
+// -----------------------------------------------------------------------------
+// Colors
+// -----------------------------------------------------------------------------
+
+@each $color, $shade-map in $active-theme {
+    @each $shade, $value in $shade-map {
+        .color-#{$color}-#{$shade} {
+            color: #{$value};
+        }
+
+        .bg-#{$color}-#{$shade} {
+            background: #{$value};
+        }
+    }
+}

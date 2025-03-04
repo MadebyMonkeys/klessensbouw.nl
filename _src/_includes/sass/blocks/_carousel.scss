@@ -1,0 +1,75 @@
+@use "../abstracts" as *;
+
+// -----------------------------------------------------------------------------
+// Carousel
+// -----------------------------------------------------------------------------
+
+.carousel {
+    overflow: clip;
+
+    &__track {
+        display: flex;
+        position: relative;
+        left: -100%;
+        transform: translateX(100%);
+        list-style: none;
+        gap: var(--space-s);
+        padding: 0;
+
+        @media (min-width: 40em) {
+            left: -50%;
+            transform: translateX(50%);
+        }
+
+        @media (min-width: 70em) {
+            left: -33.33333%;
+            transform: translateX(33.33333%);
+        }
+
+    }
+
+    &__item {
+        flex: 1 0 100%;
+        order: 2;
+
+        @media (min-width: 40em) {
+            flex-basis: 50%;
+        }
+    
+        @media (min-width: 70em) {
+            flex-basis: 33.33333%;
+        }
+    }
+}
+
+
+.carousel__track.is-reversing {
+    transform: translateX(-100%);
+
+    @media (min-width: 40em) {
+        transform: translateX(-50%);
+    }
+
+    @media (min-width: 70em) {
+        transform: translateX(-33.33333%);
+    }
+}
+
+
+.carousel__track.is-set {
+    transform: none;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+
+.carousel__track.is-ref {
+    order: 1;
+}
+
+
+
+.carousel__button {
+    padding: var(--space-2xs) var(--space-xs);
+    border-radius: 3px;
+    border: 0;
+}

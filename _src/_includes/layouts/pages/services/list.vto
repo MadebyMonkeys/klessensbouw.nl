@@ -1,0 +1,21 @@
+---
+layout: layouts/shared/default.vto
+---
+
+<section class="[ diensten ] [ full-width ] [ region brick-background ]">
+  <div class="block">
+    <span class="block__title">{{ section_service.block_title }}</span>
+    <h2 class="block__subtitle">{{ section_service.title }}</h2>
+  </div>
+  <ul class="grid" data-cols="thirds" role="list">
+    {{ set services = search.pages("type=service") }}
+    {{ for service of services }}
+    <li class="card">
+      <img class="icon" src="{{ service.icon }}" inline />
+      <h3>{{ service.title }}</h3>
+      {{ service.description |> md }}
+      <a href="{{ service.url }}" class="button" data-ghost-button>Meer informatie</a>
+    </li>
+    {{ /for }}
+  </ul>
+</section>

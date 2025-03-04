@@ -1,0 +1,24 @@
+<section class="[ testimonials ] [ full-width ] [ region ]">
+    <div class="flex-group popout">
+        <div class="block">
+            <span class="block__title">{{ section_testimonials.block_title }}</span>
+            <h2 class="block__subtitle">{{ section_testimonials.title }}</h2>
+        </div>
+        <div class="controls">
+            <button class="button carousel__button carousel__button--prev" data-button-variant="accent" data- data-toggle="prev" data-carousel-id="1" aria-label="next"><ion-icon size="large" name="arrow-back-outline"></ion-icon></button>
+            <button class="button carousel__button carousel__button--next" data-button-variant="accent" data-toggle="next" data-carousel-id="1" aria-label="previous"><ion-icon size="large" name="arrow-forward-outline"></ion-icon></button>
+        </div>
+    </div>
+    <div class="[ carousel ] [ feature ]">
+        <ul class="carousel__track">
+            {{ for item of testimonials }}
+            <li class="carousel__item">
+                <div class="card">
+                    <p>{{ item.body }}</p>
+                    <span>&ndash; <strong>{{ item.name }}</strong></span>
+                </div>
+            </li>
+            {{ /for }}
+        </ul>
+    </div>
+</section>

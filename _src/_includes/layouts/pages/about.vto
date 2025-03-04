@@ -1,15 +1,14 @@
 ---
-layout: layouts/page.vto
+layout: layouts/shared/default.vto
 ---
-
-<section class="[ aboutus ] [] [ region ]">
-    <div class="grid-auto-fit" data-col="two">
-        <div class="content flow">
-        <span class="block--subtitle">{{ about_section.subtitle }}</span>
-        <h2 class="block--title">{{ about_section.title }}</h2>
-        <p>{{ content }}</p>
-        </div>
-        <img class="image--rounded" src="{{ about_section.image |> toWebp }}" alt="about foto">
+<section class="[ about ] [ full full-width-split-screen ] [ ]">
+  <div>
+    <div class="block">
+      <span class="block__title">{{ section_about.block_title }}</span>
+      <h2 class="block__subtitle">{{ section_about.title }}</h2>
     </div>
+    {{- content -}}
+  </div>
+  <img src="{{ section_about.image }}" alt="{{ section_about.alt }}">
 </section>
-{{ include "partials/sections/testimonials.vto" }}
+{{ include "partials/blocks/testimonials.vto" }}

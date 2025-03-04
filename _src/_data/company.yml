@@ -1,15 +1,18 @@
-name: Klessens Bouw
-logo: /images/kbt-logo.svg
-kvk: 66713943
-
-contact:
-  email: kleske@live.nl
-  phone: +31 132 032 856
+name: "Klessens Bouw"
+logo: "/images/kbt-logo.svg"
+phone: "+31 132 032 856"
+email: "kleske@live.nl"
+btw_nummer: "NL123456789B01"
+kvk_nummer: "66713943"
 
 address:
   street: Pannenschuurlaan 68
   zipcode: 5061 DT
   city: Oisterwijk
+
+contact:
+  email: kleske@live.nl
+  phone: +31 132 032 856
 
 socials:
   - name: facebook

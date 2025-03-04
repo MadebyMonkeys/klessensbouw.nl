@@ -1,5 +1,5 @@
 ---
-layout: layouts/pages/algemene-voorwaarden.vto
+layout: layouts/shared/article.vto
 templateEngine: [vto,md]
 
 title: Algemene Voorwaarden
@@ -14,7 +14,7 @@ metas:
 
 **Opdrachtnemer**: De partij die de opdracht uitvoert. {{ company.name }} {{
 company.address.street }} {{ company.address.zipcode }} {{ company.address.city
-}} Kvk: {{ company.kvk }}
+}} Kvk: {{ company.kvk_nummer }}
 
 **Opdrachtgever**: De wederpartij (bedrijf of particulier) die de opdracht
 geeft.

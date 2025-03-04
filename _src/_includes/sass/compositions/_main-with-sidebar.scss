@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+//
+// -----------------------------------------------------------------------------
+
+.main-with-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: var(--space-l-2xl);
+}
+
+
+
+.main-with-sidebar {
+    & > main,
+    & > .main {
+        flex-basis: var(--content-max-width, 50ch);
+        flex-grow: 9999;
+    }
+
+    & > aside,
+    & > .sidebar {
+        flex-basis: var(--sidebar-max-width, 410px);
+        flex-grow: 1;
+    }
+}

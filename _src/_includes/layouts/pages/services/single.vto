@@ -1,0 +1,21 @@
+---
+layout: layouts/shared/base.vto
+---
+
+<div class="main-with-sidebar popout">
+    <main class="unset-content flow">
+        {{- content |> md -}}
+    </main>
+    <aside>
+        <div class="widget flow">
+            <p class="fs-500 fw-medium">Heeft u een klus of vraag? Stuur me een bericht, ik denk graag met u mee!</p>
+            {{ if widget.button_one }}
+                <a href="{{ widget.button_one.url }}" class="button" data-ghost-button>{{ widget.button_one.title }}</a>
+            {{ /if }}
+            <br>
+            {{ if widget.button_two }}
+                <a href="{{ widget.button_two.url }}" class="button">{{ widget.button_two.title }}</a>
+            {{ /if }}
+        </div>
+    </aside>
+</div>

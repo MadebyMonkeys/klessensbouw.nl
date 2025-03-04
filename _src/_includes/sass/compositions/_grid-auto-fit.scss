@@ -1,0 +1,37 @@
+@use "../abstracts" as *;
+
+//
+//
+//
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-placement, auto-fit), minmax(var(--grid-min-col-size, 16rem), 1fr));
+    gap: var(--grid-gap, #{$grid-gap});
+}
+
+
+
+//
+//
+//
+
+.grid {
+    &[data-cols="halfs"] {
+        --grid-min-col-size: clamp(16rem, 50%, 26rem);
+    }
+
+    &[data-cols="thirds"] {
+        --grid-min-col-size: clamp(14rem, 33%, 22rem);
+    }
+
+    &[data-cols="quarters"] {
+        --grid-min-col-size: clamp(12rem, 25%, 18rem);
+    }
+
+
+    &[data-rows="masonry"] {
+        grid-template-rows: masonry;
+        align-items: start;
+    }
+}

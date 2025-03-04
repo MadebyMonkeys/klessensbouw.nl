@@ -5,4 +5,4 @@ if (navToggle) {
     const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
     navToggle.setAttribute("aria-expanded", isExpanded ? "false" : "true");
   });
-}
+};
