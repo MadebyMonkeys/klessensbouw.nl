@@ -14,7 +14,7 @@ menu:
   url: "/diensten"
   order: 3
 
-section_service:
+section_services:
   block_title: "diensten"
   title: "Wat ik voor u kan betekenen"
 ---

@@ -153,6 +153,7 @@ collections:
               - { name: "block_title", label: "Block title", widget: "string" }
               - { name: "title", label: "Title", widget: "string" }
               - { name: "image", label: "Image", widget: "image" }
+              - { name: "alt", label: "Alt text", widget: "string" }
 
           - { name: "body", label: "Body", widget: "markdown" }
 

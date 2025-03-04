@@ -34,7 +34,7 @@ section_projects:
   block_title: "Projecten"
   title: "Bekijk een selectie van mijn werk"
 
-section_service:
+section_services:
   block_title: "diensten"
   title: "Mijn expertise, uw voordeel"
 
