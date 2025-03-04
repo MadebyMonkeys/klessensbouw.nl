@@ -223,7 +223,7 @@ collections:
               - { name: "description", label: "Description", widget: "string" }
 
           - name: "section_contact"
-            label: "Diensten"
+            label: "Contact"
             widget: "object"
             fields:
               - { name: "block_title", label: "Block title", widget: "string" }
