@@ -17,7 +17,7 @@ layout: layouts/shared/default.vto
             <div class="card__content flow">
                 <h3 class="fs-500">{{ item.title }}</h3>
                 <ul class="cluster tags-list" role="list">
-                    {{ for tag of tags }}
+                    {{ for tag of item.tags }}
                         <li class="tag fs-300">{{ tag }}</li>
                     {{ /for }}
                 </ul> 
