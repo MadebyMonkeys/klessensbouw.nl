@@ -45,7 +45,7 @@ h1, h2, h3, h4, button, input, label {
 }
 
 /* Balance text wrapping on headings */
-h1, h2, h3, h4 {
+h1, h2, h3 {
   max-width: 20ch;
   text-wrap: balance;
 }

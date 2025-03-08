@@ -1,6 +1,8 @@
 ---
 layout: layouts/pages/about.vto
 
+hasCarousel: true
+
 menu:
   visible: true
   title: "Over KBT"

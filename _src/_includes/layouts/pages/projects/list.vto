@@ -15,10 +15,12 @@ layout: layouts/shared/default.vto
         <div class="card card--project">
             <img src="{{ item.featured }}" alt="">
             <div class="card__content flow">
-                <h3>{{ item.title }}</h3>
-                <div class="cluster fs-300">
-                {{ item.tags |> join(', ') }}
-                </div>
+                <h3 class="fs-500">{{ item.title }}</h3>
+                <ul class="cluster tags-list" role="list">
+                    {{ for tag of tags }}
+                        <li class="tag fs-300">{{ tag }}</li>
+                    {{ /for }}
+                </ul> 
                 <a href="{{ item.url }}" class="button" data-button-ghost>Bekijk project</a>
             </div>
         </div>
