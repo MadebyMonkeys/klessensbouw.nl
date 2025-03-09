@@ -8,7 +8,7 @@ layout: layouts/shared/default.vto
       <span class="block__title">{{ section_projects.block_title }}</span>
       <h2 class="block__subtitle">{{ section_projects.title }}</h2>
     </div>
-    <ul class="grid" data-cols="halfs" role="list">
+    <ul class="grid" data-cols="thirds" role="list">
       {{ set projects = search.pages("type=project", "order=desc") }}
       {{ for item of projects }}
       <li>
